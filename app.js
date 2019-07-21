@@ -9,6 +9,9 @@ const proc = require('process')
 // 預設使用可愛的 PUG 引擎。
 app.set('view engine', 'pug')
 
+// assets 的存放處 :)
+app.use('/assets', express.static('/assets'))
+
 // GET 請求
 app.get('/', routers.index)
 

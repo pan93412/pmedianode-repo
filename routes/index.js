@@ -17,7 +17,7 @@ indexRouter.use(
 )
 
 indexRouter.get('/', (req, res) => {
-        res.render('index.html', {
+        res.render('index', {
             brand: utils.brand
         })
     }
