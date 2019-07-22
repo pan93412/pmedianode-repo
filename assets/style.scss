@@ -1,0 +1,40 @@
+// 基礎設定
+$video_width: 640px;
+$video_height: 480px;
+$picon_size: 150px;
+$badge_size: 8px;
+
+// 主 SCSS
+.round {
+    border-radius: 100%;
+}
+
+.personalIcon {
+    @extend .round;
+    width: $picon_size;
+    height: $picon_size;
+    animation-name: blur;
+    animation-duration: 2s;
+}
+
+@keyframes blur {
+    from {
+        filter: blur(10px);
+    }
+    
+    to {
+        filter: blur(0%);
+    }
+}
+
+.video {
+    width: $video_width;
+    height: $video_height;
+}
+
+@media screen and (max-width: 700px){
+    .video {
+        width: $video_width / 2;
+        height: $video_height / 2;
+    }
+}

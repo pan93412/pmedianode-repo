@@ -1,10 +1,8 @@
 const app = require('express')
 const utils = require('../util')
-const url = require('url')
-const pug = require('pug')
 const set = require('../data/settings.js')
 const fs = require('fs')
-const proc = require('process')
+const aboutRouter = require('./about.js')
 var indexRouter = app.Router()
 
 const rawVideoData = fs.readFileSync('data/mediaList.json', {
@@ -21,7 +19,6 @@ indexRouter.use(
 )
 
 indexRouter.get('/', (req, res) => {
-        utils.warn(videoData)
         res.render('index', {
             brand: utils.brand,
             userQuery: req.query.q == null ? '' : req.query.q,
@@ -32,5 +29,6 @@ indexRouter.get('/', (req, res) => {
 )
 
 module.exports = {
-    index: indexRouter
+    index: indexRouter,
+    about: aboutRouter
 }

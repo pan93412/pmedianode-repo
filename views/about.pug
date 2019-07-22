@@ -1,0 +1,33 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    script(src='assets/md5.js')
+
+body
+    include ../assets/title.pug
+    
+    //- navbar
+    +title('about')
+
+    div.container
+        div.row.pt-3
+            div.col
+                img.personalIcon(src='https://www.gravatar.com/avatar/' + md5('pan93412@gmail.com') + '?s=160')
+            div.col
+                h2 @pan93412 #[span.badge.badge-secondary 作者]
+                ul
+                    li 一名自由軟體翻譯者
+                    li 一名程式工程師
+                    ul
+                        li 前端：HTML / CSS / SCSS / JS
+                        li 後端：Python、PHP、Java、C++ (a little)、#[br]
+                        |  Golang
+                    li 可能也是個實況主（？
+                h3 聯絡方式
+                a(href='mailto:pan93412[at]gmail.com') 電子信箱 
+                |
+                a(href='https://t.me/byStarTW_TW') Telegram 
+                |
+                a(href='https://www.facebook.com/pan93412TW') Facebook 
+ 

@@ -1,11 +1,13 @@
 {
   "name": "pmedianode",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./app.js"
+    "start": "nodemon ./app.js",
+    "gencss": "bash -c 'cd assets; bash SCSS2CSS.sh'"
   },
   "dependencies": {
+    "blueimp-md5": "^2.11.0",
     "bootstrap": "^4.3.1",
     "cookie-parser": "^1.4.4",
     "debug": "^2.6.9",
@@ -13,6 +15,7 @@
     "jquery": "^3.4.1",
     "morgan": "^1.9.1",
     "node-sass-middleware": "^0.11.0",
+    "nodemon": "^1.19.1",
     "popper.js": "^1.15.0",
     "pug": "^2.0.4"
   }
