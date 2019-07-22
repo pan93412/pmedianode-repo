@@ -1,0 +1,23 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+
+body
+    include ../assets/title.pug
+    
+    //- navbar
+    +title('home')
+
+    div#container
+        div.row.align-items-center.justify-content-center.pt-3
+            each curData in vidDat
+                - var desc = curData.desc.split(/\<br\>/)
+                div.card.col-4.mr-2(style='height: ' + cardWidth)
+                    div.card-body
+                        h5.card-title= curData.title
+                        h6.card-subtitle.mb-2.text-muted
+                            a(href='/search?q=' + curData.author) @#{curData.author}
+                        p.card-text!= desc[0]
+                    div.card-body
+                        a.card-link(href='/player?id=' + curData.id) 播放
