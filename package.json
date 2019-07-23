@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./app.js",
-    "gencss": "bash -c 'cd assets; bash SCSS2CSS.sh'"
+    "gencss": "bash -c 'cd assets; bash SCSS2CSS.sh'",
+    "standard": "bash utils/standard.sh"
   },
   "dependencies": {
     "blueimp-md5": "^2.11.0",

@@ -2,15 +2,15 @@
 
 /**
  * 卡片的長度 (cardWidth)
- * 
+ *
  * @default 12.5em
  * @format CSS 尺寸單位
  */
-let cardWidth = '12.5em'
+const cardWidth = '12.5em'
 
-let brand = "pMediaNode"
+const brand = 'pMediaNode'
 
 module.exports = {
-    cardWidth: cardWidth,
-    brand: brand
+  cardWidth: cardWidth,
+  brand: brand
 }
