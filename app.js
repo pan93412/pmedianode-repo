@@ -1,6 +1,9 @@
 const express = require('express')
 var app = express()
 const routers = require('./routes')
+const options = require('./data/config.js')
+const https = require('https')
+const fs = require('fs')
 
 // 預設使用可愛的 PUG 引擎。
 app.set('view engine', 'pug')
@@ -30,6 +33,14 @@ app.get('/search', routers.search)
 // Player 頁面
 app.get(/\/player\/.+/, routers.player)
 
-// 然後，搞個 HTTP 伺服器
-// TODO: HTTPS 未來會支援。
-app.listen(3000)
+// 然後，搞個伺服器
+if (options.isHttps) {
+    server = https.createServer({
+        cert: options.httpsCert !== '' ? fs.readFileSync(options.httpsCert) : '',
+        key: options.httpsKey !== '' ? fs.readFileSync(options.httpsKey) : ''
+    }, app)
+    server.listen(options.servPort)
+}
+else {
+    app.listen(options.servPort)
+}
