@@ -5,7 +5,7 @@
   width: 150px;
   height: 150px;
   animation-name: blur;
-  animation-duration: 2s; }
+  animation-duration: 0.5s; }
 
 @keyframes blur {
   from {
