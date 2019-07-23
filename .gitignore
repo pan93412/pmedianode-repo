@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+# 非必要資訊
+data/announcements.json
+data/mediaList.json
