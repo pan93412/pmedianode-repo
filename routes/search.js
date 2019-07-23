@@ -2,8 +2,6 @@ const app = require('express')
 const log = require('../utils/log.js')
 const config = require('../data/config.js')
 const fs = require('fs')
-const aboutRouter = require('./about.js')
-const annoRouter = require('./announce.js')
 var searchRouter = app.Router()
 
 const rawVideoData = fs.readFileSync('data/mediaList.json', {
