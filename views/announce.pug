@@ -10,10 +10,10 @@ body
     +title('announce')
 
     div#container
-        div.row.align-items-center.justify-content-center.pt-3
+        .row.align-items-center.justify-content-center.pt-3
             each curData in annoDat
-                div.card.col-4.mr-2(style='height: ' + cardWidth)
-                    div.card-body(style='overflow: auto')
+                .card.col-4.mr-2(style=`height: ${cardWidth}; margin: .5rem`)
+                    .card-body(style='overflow: auto')
                         h5.card-title 
                             |
                             a(id=encodeURIComponent(curData.title + '-' + curData.date) href='#' + encodeURIComponent(curData.title + "-" + curData.date))= curData.title
