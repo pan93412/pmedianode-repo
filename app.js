@@ -27,6 +27,9 @@ app.get('/announce', routers.announce)
 // Search 頁面
 app.get('/search', routers.search)
 
+// Player 頁面
+app.get(/\/player\/.+/, routers.player)
+
 // 然後，搞個 HTTP 伺服器
 // TODO: HTTPS 未來會支援。
 app.listen(3000)

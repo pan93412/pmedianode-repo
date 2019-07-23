@@ -19,11 +19,13 @@ playerRouter.use(
 )
 
 playerRouter.get('/player/:id', (req, res) => {
+        let vidData = utils.getCurrentMediaData(videoData, req.params.id)
         res.render('player', {
             brand: config.brand,
             userQuery: req.query.q,
-            vidData: utils.getCurrentMedia(videoData, req.params.id),
+            vidData: vidData,
             vidID: req.params.id,
+            vidTags: utils.tagsParser(vidData.tags, true),
             cardWidth: config.cardWidth
         })
     }

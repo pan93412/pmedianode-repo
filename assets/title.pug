@@ -1,19 +1,19 @@
 include ../data/navBarEntries.pug
 
 // PMedia's CSS
-link(rel='stylesheet' href='assets/style.css')
+link(rel='stylesheet' href='/assets/style.css')
 
 // Bootstrap CSS
-link(rel='stylesheet' href='assets/bootstrap/dist/css/bootstrap.min.css')
+link(rel='stylesheet' href='/assets/bootstrap/dist/css/bootstrap.min.css')
 
 // jQuery
-script(src='assets/jquery/dist/jquery.min.js')
+script(src='/assets/jquery/dist/jquery.min.js')
 
 // popper.js
-script(src='assets/popperjs/dist/popper.min.js')
+script(src='/assets/popperjs/dist/popper.min.js')
 
 // Bootstrap JS
-script(src='assets/bootstrap/dist/js/bootstrap.min.js')
+script(src='/assets/bootstrap/dist/js/bootstrap.min.js')
     
 mixin title(currentPage)
     title= brand + " - " + navData[currentPage].name
