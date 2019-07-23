@@ -52,11 +52,20 @@ const httpsCert = ''
  */
 const servPort = 3000
 
+/**
+ * 是否啟用公告功能？
+ * 
+ * @default true
+ * @format bool
+ */
+const enableAnnounce = true
+
 module.exports = {
   cardWidth: cardWidth,
   brand: brand,
   isHttps: isHttps,
   httpsKey: httpsKey,
   httpsCert: httpsCert,
-  servPort: servPort
+  servPort: servPort,
+  enableAnnounce: enableAnnounce
 }

@@ -24,8 +24,8 @@ app.get('/', routers.index)
 // About 頁面
 app.get('/about', routers.about)
 
-// Announce 頁面
-app.get('/announce', routers.announce)
+// Announce 頁面（需在 config.js 中啟用公告功能）
+if (options.enableAnnounce) app.get('/announce', routers.announce)
 
 // Search 頁面
 app.get('/search', routers.search)
