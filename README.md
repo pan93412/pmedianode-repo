@@ -1,6 +1,10 @@
 # pMediaNode - 簡易的媒體管理平台
 ## 概述
-這系統的前身是 PMedia，是因為我想上傳自己的實況媒體，但又怕相關版權問題，所誕生的一個 self-hosting 媒體寄存平台。pMediaNode 是後來在 PMedia 開發完成之後，改用 Node.js 改寫的版本。
+這系統的前身是 PMedia，是因為我想上傳自己的實況影片，但又怕音樂等相關版權問題（畢竟原本是只想給幾個朋友看的…… 上傳到 YouTube 還要面對版權相關的麻煩事），因此決定自己弄出一個影片管理平台。pMediaNode 是後來在 PMedia 開發完成之後，改用 Node.js 改寫的版本。
+
+pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和音樂（video.js 支援什麼格式，你就可以上傳什麼格式）。
+
+介面使用 Bootstrap 及 Node.js 撰寫。
 
 未來這管理平台可能也會出現「上傳 / 管理媒體」及「建立 / 管理公告」的功能。
 
@@ -91,11 +95,12 @@
 ]
 ```
 
-## 個人化設定：`config.js`
-這設定放在 `data/config.js`。可以設定比如
-是否使用 HTTPS 或是否開啟公告之類的東西。
+### 個人化設定：`config.js`
+這設定放在 `data/config.js`。
+可以設定比如是否使用 HTTPS
+或是否開啟公告之類的東西。
 
-## 個人化設定：`about.pug`
+### 個人化設定：`about.pug`
 就是「關於」頁面。放在 `views/about.pug`
 
 如果你不希望我們幾個開發者出現在關於頁面，
@@ -103,23 +108,25 @@
 
 但是我自己希望不要刪 QwQ
 
-## 個人化設定：`style.scss`
+### 個人化設定：`style.scss`
 **注意**：不要改 style.css，請用稍候提到的工具從 scss
 產生出 css。
 
 用於所有頁面的全域 CSS。
 
-## 相關指令：`yarn run start`
+### 相關指令：`yarn run start`
 依 `data/config.js` 的設定啟動伺服器。這伺服器有個特點，
 當你變動檔案時，伺服器也會自動重新啟動而無須手動干涉。
 
-## 相關指令：`yarn run gencss`
+### 相關指令：`yarn run gencss`
 **注意：在提交變更前，請先使用這個指令產生 CSS。**
+
 當你變更 `style.scss` 後，輸入 `yarn run gencss` 才會產生出
 瀏覽器可以讀取的 css 檔案。
 
-## 相關指令：`yarn run standard`
+### 相關指令：`yarn run standard`
 **注意：在提交變更前，請先使用這個指令進行標準化。**
+
 將存放於 `data`、`routes`、`utils` 資料夾的 JS 檔案和 `app.js` 依
 [JavaScript Standard Style](https://standardjs.com/) 進行標準化。
 
