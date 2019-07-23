@@ -17,7 +17,6 @@ aboutRouter.get('/about', (req, res) => {
     userQuery: req.query.q,
     md5: md5
   })
-}
-)
+})
 
 module.exports = aboutRouter

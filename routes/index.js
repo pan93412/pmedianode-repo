@@ -30,8 +30,7 @@ indexRouter.get('/', (req, res) => {
     vidDat: videoData,
     cardWidth: config.cardWidth
   })
-}
-)
+})
 
 module.exports = {
   index: indexRouter,

@@ -24,7 +24,6 @@ annoRouter.get('/announce', (req, res) => {
     annoDat: annoData,
     cardWidth: config.cardWidth
   })
-}
-)
+})
 
 module.exports = annoRouter

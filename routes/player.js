@@ -28,7 +28,6 @@ playerRouter.get('/player/:id', (req, res) => {
     vidTags: utils.tagsParser(vidData.tags, true),
     cardWidth: config.cardWidth
   })
-}
-)
+})
 
 module.exports = playerRouter

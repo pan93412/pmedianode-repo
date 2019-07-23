@@ -24,7 +24,6 @@ searchRouter.get('/search', (req, res) => {
     vidDat: videoData,
     cardWidth: config.cardWidth
   })
-}
-)
+})
 
 module.exports = searchRouter
