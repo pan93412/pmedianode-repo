@@ -1,6 +1,6 @@
 const app = require('express')
-const utils = require('../util')
-const set = require('../data/settings.js')
+const log = require('../utils/log.js')
+const config = require('../data/config.js')
 const fs = require('fs')
 var annoRouter = app.Router()
 
@@ -12,17 +12,17 @@ const annoData = JSON.parse(rawAnnoData.toString()).reverse()
 
 annoRouter.use(
     (req, res, next) => {
-        utils.info(`${req.ip} 在看公告。`) // TODO: i18n
+        log.info(`${req.ip} 在看公告。`) // TODO: i18n
         next()
     }
 )
 
 annoRouter.get('/announce', (req, res) => {
         res.render('announce', {
-            brand: utils.brand,
-            userQuery: req.query.q ,
+            brand: config.brand,
+            userQuery: req.query.q,
             annoDat: annoData,
-            cardWidth: set.cardWidth
+            cardWidth: config.cardWidth
         })
     }
 )

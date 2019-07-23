@@ -1,6 +1,6 @@
 const app = require('express')
-const utils = require('../util')
-const set = require('../data/settings.js')
+const log = require('../utils/log.js')
+const config = require('../data/config.js')
 const fs = require('fs')
 
 // Routers
@@ -17,17 +17,17 @@ const videoData = JSON.parse(rawVideoData.toString()).reverse()
 
 indexRouter.use(
     (req, res, next) => {
-        utils.info(`${req.ip} 進入首頁。`) // TODO: i18n
+        log.info(`${req.ip} 進入首頁。`) // TODO: i18n
         next()
     }
 )
 
 indexRouter.get('/', (req, res) => {
         res.render('index', {
-            brand: utils.brand,
+            brand: config.brand,
             userQuery: req.query.q ,
             vidDat: videoData,
-            cardWidth: set.cardWidth
+            cardWidth: config.cardWidth
         })
     }
 )

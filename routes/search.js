@@ -1,6 +1,6 @@
 const app = require('express')
-const utils = require('../util')
-const set = require('../data/settings.js')
+const log = require('../utils/log.js')
+const config = require('../data/config.js')
 const fs = require('fs')
 const aboutRouter = require('./about.js')
 const annoRouter = require('./announce.js')
@@ -14,17 +14,17 @@ const videoData = JSON.parse(rawVideoData.toString()).reverse()
 
 searchRouter.use(
     (req, res, next) => {
-        utils.info(`${req.ip} ${req.query.q == null ? '進入了搜尋頁面' : '搜尋了 ' + req.query.q}`) // TODO: i18n
+        log.info(`${req.ip} ${req.query.q == null ? '進入了搜尋頁面' : '搜尋了 ' + req.query.q}`) // TODO: i18n
         next()
     }
 )
 
 searchRouter.get('/search', (req, res) => {
         res.render('search', {
-            brand: utils.brand,
+            brand: config.brand,
             userQuery: req.query.q ,
             vidDat: videoData,
-            cardWidth: set.cardWidth
+            cardWidth: config.cardWidth
         })
     }
 )

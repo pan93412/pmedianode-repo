@@ -8,7 +8,9 @@
  */
 let cardWidth = '12.5em'
 
+let brand = "pMediaNode"
 
 module.exports = {
-    cardWidth: cardWidth
+    cardWidth: cardWidth,
+    brand: brand
 }

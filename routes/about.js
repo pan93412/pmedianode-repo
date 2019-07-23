@@ -1,19 +1,19 @@
 const app = require('express')
-const utils = require('../util')
-const set = require('../data/settings.js')
+const log = require('../utils/log.js')
+const config = require('../data/config.js')
 const md5 = require('blueimp-md5')
 var aboutRouter = app.Router()
 
 aboutRouter.use(
     (req, res, next) => {
-        utils.info(`${req.ip} 正在看關於介面。`) // TODO: i18n
+        log.info(`${req.ip} 正在看關於介面。`) // TODO: i18n
         next()
     }
 )
 
 aboutRouter.get('/about', (req, res) => {
         res.render('about', {
-            brand: utils.brand,
+            brand: config.brand,
             userQuery: req.query.q ,
             md5: md5
         })
