@@ -8,6 +8,7 @@
  */
 let cardWidth = '12.5em'
 
+
 module.exports = {
     cardWidth: cardWidth
 }

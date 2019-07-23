@@ -15,6 +15,10 @@ app.use('/assets', express.static('assets'))
 // 使用者可自訂的 data 存放處
 app.use('/assets/data', express.static('data'))
 
+/*
+ * Routers
+ */
+
 // Home 頁面
 app.get('/', routers.index)
 
@@ -24,9 +28,9 @@ app.get('/about', routers.about)
 // Announce 頁面
 app.get('/announce', routers.announce)
 
-// Announce 頁面
+// Search 頁面
 app.get('/search', routers.search)
 
 // 然後，搞個 HTTP 伺服器
-// HTTPS 未來會支援。
+// TODO: HTTPS 未來會支援。
 app.listen(3000)
