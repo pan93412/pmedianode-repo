@@ -27,14 +27,13 @@ function tagsParser (taglist, isCode = false, delimiter = ", ") {
     if (isCode) {
         tagResult += '<code>'
     }
+    
+    tagResult += taglist.join(delimiter)
 
-    for (tag of taglist) {
-        tagResult += tag
-
-        if (taglist[taglist.length - 1] !== tag) tagResult += delimiter
-        else if (isCode) tagResult += '</code>'
+    if (isCode) {
+        tagResult += '</code>'
     }
-
+    
     return tagResult;
 }
 
