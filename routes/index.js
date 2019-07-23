@@ -7,6 +7,7 @@ const fs = require('fs')
 const aboutRouter = require('./about.js')
 const annoRouter = require('./announce.js')
 const searchRouter = require('./search.js')
+const playerRouter = require('./player.js')
 var indexRouter = app.Router()
 
 const rawVideoData = fs.readFileSync('data/mediaList.json', {
@@ -36,5 +37,6 @@ module.exports = {
     index: indexRouter,
     about: aboutRouter,
     announce: annoRouter,
-    search: searchRouter
+    search: searchRouter,
+    player: playerRouter
 }
