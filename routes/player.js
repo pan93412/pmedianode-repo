@@ -6,29 +6,29 @@ const fs = require('fs')
 var playerRouter = app.Router()
 
 const rawVideoData = fs.readFileSync('data/mediaList.json', {
-    encoding: 'UTF-8'
+  encoding: 'UTF-8'
 })
 
 const videoData = JSON.parse(rawVideoData.toString()).reverse()
 
 playerRouter.use(
-    (req, res, next) => {
-        log.info(`${req.ip} 進入首頁。`) // TODO: i18n
-        next()
-    }
+  (req, res, next) => {
+    log.info(`${req.ip} 進入首頁。`) // TODO: i18n
+    next()
+  }
 )
 
 playerRouter.get('/player/:id', (req, res) => {
-        let vidData = utils.getCurrentMediaData(videoData, req.params.id)
-        res.render('player', {
-            brand: config.brand,
-            userQuery: req.query.q,
-            vidData: vidData,
-            vidID: req.params.id,
-            vidTags: utils.tagsParser(vidData.tags, true),
-            cardWidth: config.cardWidth
-        })
-    }
+  const vidData = utils.getCurrentMediaData(videoData, req.params.id)
+  res.render('player', {
+    brand: config.brand,
+    userQuery: req.query.q,
+    vidData: vidData,
+    vidID: req.params.id,
+    vidTags: utils.tagsParser(vidData.tags, true),
+    cardWidth: config.cardWidth
+  })
+}
 )
 
 module.exports = playerRouter
