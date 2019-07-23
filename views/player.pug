@@ -14,7 +14,7 @@ body
         .row.pt-3
             .col#playerContainer
                 if vidID
-                    video.video.video-js.vjs-default.skin.sticky-top#videoPlayer(preload='metadata' data-setup='{\"liveui\": true, \"playbackRates\": [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]}' controls)
+                    video.video.video-js.vjs-default.skin.sticky-top#mediaPlayer(preload='metadata' data-setup='{\"liveui\": true, \"playbackRates\": [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]}' controls)
                         source(src=vidData.url)
                 else
                     h2 錯誤

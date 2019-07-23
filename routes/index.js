@@ -10,11 +10,11 @@ const searchRouter = require('./search.js')
 const playerRouter = require('./player.js')
 var indexRouter = app.Router()
 
-const rawVideoData = fs.readFileSync('data/mediaList.json', {
+const rawMediaData = fs.readFileSync('data/mediaList.json', {
   encoding: 'UTF-8'
 })
 
-const videoData = JSON.parse(rawVideoData.toString()).reverse()
+const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 indexRouter.use(
   (req, res, next) => {
@@ -27,7 +27,7 @@ indexRouter.get('/', (req, res) => {
   res.render('index', {
     brand: config.brand,
     userQuery: req.query.q,
-    vidDat: videoData,
+    vidDat: mediaData,
     cardWidth: config.cardWidth
   })
 })

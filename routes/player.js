@@ -5,11 +5,11 @@ const config = require('../data/config.js')
 const fs = require('fs')
 var playerRouter = app.Router()
 
-const rawVideoData = fs.readFileSync('data/mediaList.json', {
+const rawMediaData = fs.readFileSync('data/mediaList.json', {
   encoding: 'UTF-8'
 })
 
-const videoData = JSON.parse(rawVideoData.toString()).reverse()
+const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 playerRouter.use(
   (req, res, next) => {
@@ -19,7 +19,7 @@ playerRouter.use(
 )
 
 playerRouter.get('/player/:id', (req, res) => {
-  const vidData = utils.getCurrentMediaData(videoData, req.params.id)
+  const vidData = utils.getCurrentMediaData(mediaData, req.params.id)
   res.render('player', {
     brand: config.brand,
     userQuery: req.query.q,
