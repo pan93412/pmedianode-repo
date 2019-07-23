@@ -1,0 +1,22 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+
+body
+    include ../assets/title.pug
+    
+    //- navbar
+    +title('announce')
+
+    div#container
+        div.row.align-items-center.justify-content-center.pt-3
+            each curData in annoDat
+                div.card.col-4.mr-2(style='height: ' + cardWidth)
+                    div.card-body(style='overflow: auto')
+                        h5.card-title 
+                            |
+                            a(id=encodeURIComponent(curData.title + '-' + curData.date) href='#' + encodeURIComponent(curData.title + "-" + curData.date))= curData.title
+                        h6.card-subtitle.mb-2.text-muted @#{curData.author} 
+                            | at #{curData.date}
+                        p.card-text!= curData.content

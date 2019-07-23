@@ -3,17 +3,18 @@ const utils = require('../util')
 const set = require('../data/settings.js')
 const fs = require('fs')
 const aboutRouter = require('./about.js')
+const annoRouter = require('./announce.js')
 var indexRouter = app.Router()
 
 const rawVideoData = fs.readFileSync('data/mediaList.json', {
     encoding: 'UTF-8'
 })
 
-const videoData = JSON.parse(rawVideoData.toString())
+const videoData = JSON.parse(rawVideoData.toString()).reverse()
 
 indexRouter.use(
     (req, res, next) => {
-        utils.info(`${req.ip} 進入了 ${req.url}。`) // TODO: i18n
+        utils.info(`${req.ip} 進入首頁。`) // TODO: i18n
         next()
     }
 )
@@ -30,5 +31,6 @@ indexRouter.get('/', (req, res) => {
 
 module.exports = {
     index: indexRouter,
-    about: aboutRouter
+    about: aboutRouter,
+    announce: annoRouter
 }

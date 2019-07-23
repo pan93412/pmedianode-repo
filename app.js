@@ -21,6 +21,9 @@ app.get('/', routers.index)
 // About 頁面
 app.get('/about', routers.about)
 
+// Announce 頁面
+app.get('/announce', routers.announce)
+
 // 然後，搞個 HTTP 伺服器
 // HTTPS 未來會支援。
 app.listen(3000)
