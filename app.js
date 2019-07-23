@@ -1,10 +1,6 @@
 const express = require('express')
 var app = express()
 const routers = require('./routes')
-const utils = require('./util')
-const http = require('http')
-const fs = require('fs')
-const proc = require('process')
 
 // 預設使用可愛的 PUG 引擎。
 app.set('view engine', 'pug')
