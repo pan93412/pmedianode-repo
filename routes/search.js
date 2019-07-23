@@ -22,7 +22,7 @@ searchRouter.use(
 searchRouter.get('/search', (req, res) => {
         res.render('search', {
             brand: utils.brand,
-            userQuery: req.query.q == null ? '' : req.query.q,
+            userQuery: req.query.q ,
             vidDat: videoData,
             cardWidth: set.cardWidth
         })

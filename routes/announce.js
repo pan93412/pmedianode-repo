@@ -20,7 +20,7 @@ annoRouter.use(
 annoRouter.get('/announce', (req, res) => {
         res.render('announce', {
             brand: utils.brand,
-            userQuery: req.query.q == null ? '' : req.query.q,
+            userQuery: req.query.q ,
             annoDat: annoData,
             cardWidth: set.cardWidth
         })

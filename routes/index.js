@@ -25,7 +25,7 @@ indexRouter.use(
 indexRouter.get('/', (req, res) => {
         res.render('index', {
             brand: utils.brand,
-            userQuery: req.query.q == null ? '' : req.query.q,
+            userQuery: req.query.q ,
             vidDat: videoData,
             cardWidth: set.cardWidth
         })

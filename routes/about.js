@@ -14,7 +14,7 @@ aboutRouter.use(
 aboutRouter.get('/about', (req, res) => {
         res.render('about', {
             brand: utils.brand,
-            userQuery: req.query.q == null ? '' : req.query.q,
+            userQuery: req.query.q ,
             md5: md5
         })
     }
