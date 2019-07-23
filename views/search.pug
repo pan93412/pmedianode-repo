@@ -1,0 +1,28 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+
+body
+    include ../assets/title.pug
+    
+    //- navbar
+    +title('search')
+
+    div.container.pt-3
+        h2 #{userQuery} 的搜尋結果
+        div.row.align-items-center.justify-content-center.pt-3
+            each curData in vidDat
+                each tag in curData.tags
+                    - var query = userQuery.toLowerCase()
+                    if query === tag.toLowerCase() || query === curData.author.toLowerCase() || query === curData.title.toLowerCase() || query === curData.id.toLowerCase()
+                        - var desc = curData.desc.split(/\<br\>/)                        
+                        div.card.col-4.mr-2(style='height: ' + cardWidth)
+                            div.card-body
+                                h5.card-title= curData.title
+                                h6.card-subtitle.mb-2.text-muted
+                                    a(href='/search?q=' + curData.author) @#{curData.author}
+                                p.card-text!= desc[0]
+                            div.card-body
+                                a.card-link(href='/player?id=' + curData.id) 播放
+                        - break

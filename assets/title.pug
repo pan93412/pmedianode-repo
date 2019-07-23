@@ -27,7 +27,7 @@ mixin title(currentPage)
             ul.navbar-nav
                 each pageObj in navData
                     if pageObj.hide === false
-                        if pageObj === currentPage
+                        if pageObj === navData[currentPage]
                             li.nav-item.active
                                 a.nav-link(href='#')= pageObj.name
                         else
