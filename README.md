@@ -8,6 +8,23 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 
 未來這管理平台可能也會出現「上傳 / 管理媒體」及「建立 / 管理公告」的功能。
 
+## 目前支援格式
+經過測試的有：
+- m3u8 (hls 直播)
+- mp4
+- mp3
+- HTML video 屬性原生支援的所有格式
+
+確定無法播放的有：
+- flac（暫未考慮支援）
+
+### 注意！
+- 若要進行 HLS 直播，可選擇放在這台 Node 伺服器內。
+  請參考 [這個連結](#host-inside) 得知如何存放。
+- 如果 HLS 直播放在外部，請確保存放該直播的伺服器有設定 CORS，
+  相關資訊請參考 [Video.js 關於 HLS 的 FAQ](https://docs.videojs.com/tutorial-faq.html#q%3A-does-video.js-support-hls-(http-live-streaming)-video%3F)
+- 其他資訊可以去看看 [Video.js 的 FAQ](https://docs.videojs.com/tutorial-faq.html)
+
 ## 準備
 - Node.js
 - yarn
@@ -130,7 +147,7 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 將存放於 `data`、`routes`、`utils` 資料夾的 JS 檔案和 `app.js` 依
 [JavaScript Standard Style](https://standardjs.com/) 進行標準化。
 
-### 其他說明：怎麼將檔案寄存在這個 Node 伺服器？
+### <a id="host-inside">其他說明：怎麼將檔案寄存在這個 Node 伺服器？</a>
 目前有兩個目錄被設定成 static 位置（就是可以讓你放東西的地方）：
 
 - assets：會對應到 `伺服器/assets`
@@ -138,6 +155,10 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 
 假設你把一個檔案（假設 `video.mp4`）放在 data 的 media 目錄中，
 那這個檔案的遠端路徑將會是 `伺服器/assets/data/media/video.mp4`。
+
+## 一些 TODO
+- 讓整個網站支援多語系。
+    - 目前我可能會考慮自己寫一個 I18n Library，但是現在有點懶啊 (?)
 
 ## 作者
 pan93412, 2019.
