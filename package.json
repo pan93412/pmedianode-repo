@@ -8,6 +8,7 @@
     "standard": "bash utils/standard.sh"
   },
   "dependencies": {
+    "@videojs/http-streaming": "^1.10.4",
     "blueimp-md5": "^2.11.0",
     "bootstrap": "^4.3.1",
     "cookie-parser": "^1.4.4",
@@ -19,6 +20,7 @@
     "nodemon": "^1.19.1",
     "popper.js": "^1.15.0",
     "pug": "^2.0.4",
-    "standard": "^13.1.0"
+    "standard": "^13.1.0",
+    "video.js": "^7.6.0"
   }
 }
