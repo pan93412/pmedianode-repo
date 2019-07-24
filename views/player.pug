@@ -25,3 +25,14 @@ body
                     blockquote!= vidData.desc
                     p 發布者：#{vidData.author}
                     p!= '標籤：' + vidTags
+
+script(src='https://vjs.zencdn.net/7.6.0/video.js')
+
+// 判斷影片是否可用
+script.
+    $("#mediaPlayer").on("error", () => {
+        $("#playerContainer").empty()
+            .append("<h2>錯誤</h2>")
+            .append("<p>影片編號正確，但是<b>影片不存在</b>。請聯絡管理員。</p>");
+        }
+    )
