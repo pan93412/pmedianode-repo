@@ -3,6 +3,7 @@ const log = require('../utils/log.js')
 const utils = require('../utils')
 const config = require('../data/config.js')
 const fs = require('fs')
+const url = require('url');
 var playerRouter = app.Router()
 
 const rawMediaData = fs.readFileSync('data/mediaList.json', {
@@ -26,7 +27,8 @@ playerRouter.get('/player/:id', (req, res) => {
     vidData: vidData,
     vidID: req.params.id,
     vidTags: utils.tagsParser(vidData.tags, true),
-    cardWidth: config.cardWidth
+    cardWidth: config.cardWidth,
+    url: url // URL Module
   })
 })
 
