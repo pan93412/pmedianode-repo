@@ -13,7 +13,7 @@ body
         div.row.align-items-center.justify-content-center.pt-3
             each curData in vidDat
                 - var desc = curData.desc.split(/\<br\>/)
-                div.card.col-4.mr-2(style=`height: ${cardWidth}; margin: .5rem`)
+                div.card.col-4.mr-2(style=`min-height: ${cardWidth}; margin: .5rem`)
                     div.card-body
                         h5.card-title= curData.title
                         h6.card-subtitle.mb-2.text-muted
