@@ -2,7 +2,7 @@ doctype html
 html
 head
     meta(charset='UTF-8')
-    link(href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet")
+    link(href="/assets/videoJS/video-js.min.css" rel="stylesheet")
 
 body
     include ../assets/title.pug
@@ -15,7 +15,7 @@ body
             .col#playerContainer
                 if vidID
                     video.video.video-js.vjs-default.skin.sticky-top#mediaPlayer(preload='metadata' data-setup='{\"liveui\": true, \"playbackRates\": [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]}' controls)
-                        source(src=vidData.url)
+                        source(src=vidData.url type="application/x-mpegURL")
                 else
                     h2 錯誤
                         | p 媒體可能不存在，或您輸入的媒體 ID 錯誤！
@@ -26,7 +26,8 @@ body
                     p 發布者：#{vidData.author}
                     p!= '標籤：' + vidTags
 
-script(src='https://vjs.zencdn.net/7.6.0/video.js')
+script(src='/assets/videoJS/video.min.js')
+script(src='/assets/videoJSStream/videojs-http-streaming.min.js')
 
 // 判斷影片是否可用
 script.
