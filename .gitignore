@@ -63,3 +63,4 @@ typings/
 # 非必要資訊
 data/announcements.json
 data/mediaList.json
+data/media/
