@@ -1,4 +1,4 @@
-# pMediaNode - 簡易的媒體管理平台
+# <img src='https://github.com/pan93412/pmedianode-repo/blob/master/assets/pMediaNodeLogo.svg' width="100px" height= "100px"> pMediaNode - 簡易的媒體管理平台
 ## 概述
 這系統的前身是 PMedia，是因為我想上傳自己的實況影片，但又怕音樂等相關版權問題（畢竟原本是只想給幾個朋友看的…… 上傳到 YouTube 還要面對版權相關的麻煩事），因此決定自己弄出一個影片管理平台。pMediaNode 是後來在 PMedia 開發完成之後，改用 Node.js 改寫的版本。
 
@@ -18,7 +18,7 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 確定無法播放的有：
 - flac（暫未考慮支援）
 
-### 注意！
+### ⚠️ 注意！
 - 若要進行 HLS 直播，可選擇放在這台 Node 伺服器內。
   請參考 [這個連結](#host-inside) 得知如何存放。
 - 如果 HLS 直播放在外部，請確保存放該直播的伺服器有設定 CORS，
