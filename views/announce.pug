@@ -4,7 +4,7 @@ head
     meta(charset='UTF-8')
 
 body
-    include ../assets/title.pug
+    include title.pug
     
     //- navbar
     +title('announce')
@@ -20,3 +20,5 @@ body
                         h6.card-subtitle.mb-2.text-muted @#{curData.author} 
                             | at #{curData.date}
                         p.card-text!= curData.content
+
+include footer.pug

@@ -4,23 +4,32 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./app.js",
-    "gencss": "bash -c 'cd assets; bash SCSS2CSS.sh'",
+    "build": "webpack",
     "standard": "bash utils/standard.sh"
   },
   "dependencies": {
+    "debug": "^2.6.9",
+    "express": "^4.16.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
     "@videojs/http-streaming": "^1.10.4",
     "blueimp-md5": "^2.11.0",
     "bootstrap": "^4.3.1",
-    "cookie-parser": "^1.4.4",
-    "debug": "^2.6.9",
-    "express": "^4.16.1",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
     "jquery": "^3.4.1",
-    "morgan": "^1.9.1",
-    "node-sass-middleware": "^0.11.0",
-    "nodemon": "^1.19.1",
+    "node-sass": "^4.12.0",
     "popper.js": "^1.15.0",
     "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^7.1.0",
     "standard": "^13.1.0",
-    "video.js": "^7.6.0"
+    "style-loader": "^0.23.1",
+    "video.js": "^7.6.0",
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }

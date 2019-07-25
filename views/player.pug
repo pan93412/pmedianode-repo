@@ -2,10 +2,9 @@ doctype html
 html
 head
     meta(charset='UTF-8')
-    link(href="/assets/videoJS/video-js.min.css" rel="stylesheet")
 
 body
-    include ../assets/title.pug
+    include title.pug
     
     //- navbar
     +title('play')
@@ -29,5 +28,4 @@ body
                     p 發布者：#{vidData.author}
                     p!= '標籤：' + vidTags
 
-script(src='/assets/videoJS/video.min.js')
-script(src='/assets/videoJSStream/videojs-http-streaming.min.js')
+include footer.pug

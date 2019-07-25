@@ -4,7 +4,7 @@ head
     meta(charset='UTF-8')
 
 body
-    include ../assets/title.pug
+    include title.pug
     
     //- navbar
     +title('home')
@@ -21,3 +21,5 @@ body
                         p.card-text!= desc[0]
                     div.card-body
                         a.card-link(href='/player/' + curData.id) 播放
+
+include footer.pug

@@ -2,10 +2,9 @@ doctype html
 html
 head
     meta(charset='UTF-8')
-    script(src='assets/md5.js')
 
 body
-    include ../assets/title.pug
+    include title.pug
     
     //- navbar
     +title('about')
@@ -14,7 +13,7 @@ body
         .row.pt-3
             //- PMediaNode 說明
             .col
-                img.brandIcon(src='/assets/pMediaNodeLogo.svg')
+                img.brandIcon#brandLogo
             .col
                 h2 pMediaNode #[span.badge.badge-secondary(style='font-size: 16px') 此站程式]
                 p 這系統的前身是 PMedia，是因為我想上傳自己的實況影片，但又怕音樂等相關版權問題
@@ -85,3 +84,5 @@ body
                     li koa2 使用請
                 h3 聯絡方式
                 a(href='https://github.com/U2FsdGVkX1') GitHub
+
+include footer.pug
