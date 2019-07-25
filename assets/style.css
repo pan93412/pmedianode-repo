@@ -1,11 +1,16 @@
-.round, .personalIcon {
+.round, .icon, .personalIcon,
+.brandIcon {
   border-radius: 100%; }
 
-.personalIcon {
+.icon, .personalIcon,
+.brandIcon {
   width: 150px;
   height: 150px;
   animation-name: blur;
   animation-duration: 0.5s; }
+
+.personalIcon {
+  box-shadow: 1px 3px 15px 3px; }
 
 @keyframes blur {
   from {
