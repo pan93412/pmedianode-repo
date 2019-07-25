@@ -1,4 +1,4 @@
-# <img src='https://github.com/pan93412/pmedianode-repo/blob/master/assets/pMediaNodeLogo.svg' width="100px" height= "100px"> pMediaNode - 簡易的媒體管理平台
+# <img src='https://github.com/pan93412/pmedianode-repo/blob/master/assets/Banner.svg' alt='pMediaNode - 簡易的媒體管理平台'>
 ## 概述
 這系統的前身是 PMedia，是因為我想上傳自己的實況影片，但又怕音樂等相關版權問題（畢竟原本是只想給幾個朋友看的…… 上傳到 YouTube 還要面對版權相關的麻煩事），因此決定自己弄出一個影片管理平台。pMediaNode 是後來在 PMedia 開發完成之後，改用 Node.js 改寫的版本。
 
