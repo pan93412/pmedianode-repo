@@ -15,7 +15,8 @@ aboutRouter.get('/about', (req, res) => {
   res.render('about', {
     brand: config.brand,
     userQuery: req.query.q,
-    md5: md5
+    md5: md5,
+    showAuthors: config.showAuthors
   })
 })
 

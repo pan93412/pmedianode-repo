@@ -1,5 +1,4 @@
-# <img src='https://github.com/pan93412/pmedianode-repo/blob/master/Banner.svg' alt='pMediaNode - 簡易的媒體管理平台'>
-## 概述
+# <img src='https://github.com/pan93412/pmedianode-repo/blob/master/Banner.svg' alt='pMediaNode - 簡易、便捷、優雅的媒體管理平台'>
 這系統的前身是 PMedia，是因為我想上傳自己的實況影片，但又怕音樂等相關版權問題（畢竟原本是只想給幾個朋友看的…… 上傳到 YouTube 還要面對版權相關的麻煩事），因此決定自己弄出一個影片管理平台。pMediaNode 是後來在 PMedia 開發完成之後，改用 Node.js 改寫的版本。
 
 pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和音樂（video.js 支援什麼格式，你就可以上傳什麼格式）。
@@ -121,9 +120,9 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 就是「關於」頁面。放在 `views/about.pug`
 
 如果你不希望我們幾個開發者出現在關於頁面，
-那可以刪掉。
+那可以在 `data/config.js` 把 showAuthors 關閉。
 
-但是我自己希望不要刪 QwQ
+> v2.1.0: 預設 showAuthors 為 false
 
 ### 個人化設定：`style.scss`
 **注意**：不要改 style.css，請用稍候提到的工具從 scss

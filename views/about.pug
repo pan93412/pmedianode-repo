@@ -26,63 +26,66 @@ body
                 p 未來這管理平台可能也會出現「上傳 / 管理媒體」及「建立 / 管理公告」的功能。
                 
                 a(href='https://github.com/pan93412/pmedianode-repo') pMediaNode 的 GitHub
-        .row.pt-3
-            //- pan93412
-            .col
-                img.personalIcon(src='https://www.gravatar.com/avatar/' + md5('pan93412@gmail.com') + '?s=160')
-            .col
-                h2 @pan93412 #[span.badge.badge-secondary(style='font-size: 16px') 作者]
-                ul
-                    li 一名自由軟體翻譯者
-                    li 一名程式工程師
+        if showAuthors
+            .row.pt-3
+                //- pan93412
+                .col
+                    img.personalIcon(src='https://www.gravatar.com/avatar/' + md5('pan93412@gmail.com') + '?s=160')
+                .col
+                    h2 @pan93412 #[span.badge.badge-secondary(style='font-size: 16px') 程式作者]
                     ul
-                        li 前端：HTML / CSS / SCSS / JS
-                        li 後端：Python、PHP、Java、C++ (a little)、#[br]
-                        |  Golang
-                    li 可能也是個實況主（？
-                    li Bootstrap 文件爛死
-                h3 聯絡方式
-                a(href='mailto:pan93412[at]gmail.com') 電子信箱 
-                |
-                a(href='https://t.me/byStarTW_TW') Telegram 
-                |
-                a(href='https://www.facebook.com/pan93412TW') Facebook 
-                |
-                a(href='https://github.com/pan93412') GitHub
-        .row.pt-3
-            //- hugwalk
-            .col
-                img.personalIcon(src='https://www.gravatar.com/avatar/' + md5('baozou0421@gmail.com') + '?s=160')
-            .col
-                h2 @hugwalk #[span.badge.badge-secondary(style='font-size: 16px') 協作者]
-                ul
-                    li 業餘設計師
+                        li 一名自由軟體翻譯者
+                        li 一名程式工程師
                         ul
-                            li 使用者介面
-                            li 插畫
-                            li 動畫
-                    li 自由軟體翻譯者
-                    li 我恨 Bootstrap，戰？
-                h3 聯絡方式
-                a(href='mailto:extended.wl[at]gmail.com') 電子信箱 
-                |
-                a(href='https://t.me/hugwalk') Telegram 
-                |
-                a(href='https://twitter.com/hugwalk') Twitter
-    .container
-        .row.pt-3
-            //- U2FsdGVkX1
-            .col
-                img.personalIcon(src='https://www.gravatar.com/avatar/' + md5('u2fsdgvkx1@gmail.com') + '?s=160')
-            .col
-                h2 @U2FsdGVkX1 #[span.badge.badge-secondary(style='font-size: 16px') 協作者]
-                ul
-                    li 討厭 express
-                    li 討厭 Bootstrap
-                    li Vue.JS 使用請
-                    li Laravel 使用請
-                    li koa2 使用請
-                h3 聯絡方式
-                a(href='https://github.com/U2FsdGVkX1') GitHub
+                            li 前端：HTML / CSS / SCSS / JS
+                            li 後端：Python、PHP、Java、C++ (a little)、#[br]
+                            |  Golang
+                        li 可能也是個實況主（？
+                        li Bootstrap 文件爛死
+                    h3 聯絡方式
+                    a(href='mailto:pan93412[at]gmail.com') 電子信箱 
+                    |
+                    a(href='https://t.me/byStarTW_TW') Telegram 
+                    |
+                    a(href='https://www.facebook.com/pan93412TW') Facebook 
+                    |
+                    a(href='https://github.com/pan93412') GitHub
+            .row.pt-3
+                //- hugwalk
+                .col
+                    img.personalIcon(src='https://www.gravatar.com/avatar/' + md5('baozou0421@gmail.com') + '?s=160')
+                .col
+                    h2 @hugwalk #[span.badge.badge-secondary(style='font-size: 16px') 程式協作者]
+                    ul
+                        li 業餘設計師
+                            ul
+                                li 使用者介面
+                                li 插畫
+                                li 動畫
+                        li 自由軟體翻譯者
+                        li 我恨 Bootstrap，戰？
+                    h3 聯絡方式
+                    a(href='mailto:extended.wl[at]gmail.com') 電子信箱 
+                    |
+                    a(href='https://t.me/hugwalk') Telegram 
+                    |
+                    a(href='https://twitter.com/hugwalk') Twitter
+            .row.pt-3
+                //- U2FsdGVkX1
+                .col
+                    img.personalIcon(src='https://www.gravatar.com/avatar/' + md5('u2fsdgvkx1@gmail.com') + '?s=160')
+                .col
+                    h2 @U2FsdGVkX1 #[span.badge.badge-secondary(style='font-size: 16px') 程式協作者]
+                    ul
+                        li 討厭 express
+                        li 討厭 Bootstrap
+                        li Vue.JS 使用請
+                        li Laravel 使用請
+                        li koa2 使用請
+                    h3 聯絡方式
+                    a(href='https://github.com/U2FsdGVkX1') GitHub
 
 include footer.pug
+
+// 包含 SVG logo
+script(src='/assets/about.bundle.js')
