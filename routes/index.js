@@ -8,6 +8,12 @@ const aboutRouter = require('./about.js')
 const annoRouter = require('./announce.js')
 const searchRouter = require('./search.js')
 const playerRouter = require('./player.js')
+
+// l10n
+const sprintf = require('sprintf-js').sprintf
+const loggingStr = require(`../data/strings/${config.lang}/logging.js`)
+const pageStr = require(`../data/strings/${config.lang}/page.js`)
+
 var indexRouter = app.Router()
 
 const rawMediaData = fs.readFileSync('data/mediaList.json', {
@@ -18,7 +24,7 @@ const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 indexRouter.use(
   (req, res, next) => {
-    if (config.verbose) log.info(`${req.ip} 進入首頁。`) // TODO: i18n
+    if (config.verbose) log.info(sprintf(loggingStr.index_browsed, req.ip))
     next()
   }
 )
@@ -28,7 +34,8 @@ indexRouter.get('/', (req, res) => {
     brand: config.brand,
     userQuery: req.query.q,
     vidDat: mediaData,
-    cardWidth: config.cardWidth
+    cardWidth: config.cardWidth,
+    strings: pageStr
   })
 })
 

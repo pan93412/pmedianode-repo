@@ -4,6 +4,12 @@ const utils = require('../utils')
 const config = require('../data/config.js')
 const fs = require('fs')
 const url = require('url')
+
+// l10n
+const sprintf = require('sprintf-js').sprintf
+const loggingStr = require(`../data/strings/${config.lang}/logging.js`)
+const pageStr = require(`../data/strings/${config.lang}/page.js`)
+
 var playerRouter = app.Router()
 
 const rawMediaData = fs.readFileSync('data/mediaList.json', {
@@ -14,7 +20,7 @@ const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 playerRouter.use(
   (req, res, next) => {
-    if (config.verbose) log.info(`${req.ip} 正在看存放在 ${req.url} 的影片。`) // TODO: i18n
+    if (config.verbose) log.info(sprintf(loggingStr.player_watched, req.ip, req.url))
     next()
   }
 )
@@ -28,7 +34,8 @@ playerRouter.get('/player/:id', (req, res) => {
     vidID: req.params.id,
     vidTags: utils.tagsParser(vidData.tags, true),
     cardWidth: config.cardWidth,
-    url: url // URL Module
+    url: url, // URL Module
+    strings: pageStr
   })
 })
 
