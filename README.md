@@ -144,6 +144,15 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 與 `yarn run build` 功能類似，不過加了 `--mode=developement`
 方便偵錯。
 
+### 如何翻譯 pMediaNode？
+進入 `data/strings`，然後仿照 `zh_TW` 或 `en_US` 的格式建立出您自己的語言。
+
+翻完之後可選是否 Pull Request，但個人希望能 PR 上來，
+讓更多的人能夠使用你的成果！ :)
+
+此外，每次字串有變動，我都會將變動的字串合併至所有語系的字串檔，
+所以也不必擔心「以後是否要自己合併字串檔」的問題。
+
 ### <a id="host-inside">其他說明：怎麼將檔案寄存在這個 Node 伺服器？</a>
 目前有兩個目錄被設定成 static 位置（就是可以讓你放東西的地方）：
 
