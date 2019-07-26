@@ -74,6 +74,14 @@ const enableAnnounce = true
  */
 const showAuthors = false
 
+/**
+ * 是否顯示更詳細的瀏覽訊息？
+ *
+ * @default false
+ * @format bool
+ */
+const verbose = false
+
 module.exports = {
   cardWidth: cardWidth,
   brand: brand,
@@ -82,5 +90,6 @@ module.exports = {
   httpsCert: httpsCert,
   servPort: servPort,
   enableAnnounce: enableAnnounce,
-  showAuthors: showAuthors
+  showAuthors: showAuthors,
+  verbose: verbose
 }
