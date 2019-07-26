@@ -3,7 +3,7 @@
 
 pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和音樂（video.js 支援什麼格式，你就可以上傳什麼格式）。
 
-介面使用 Bootstrap 及 Node.js 撰寫。
+介面使用 Bootstrap 及 Node.js 撰寫，並使用 webpack 管理資源。
 
 未來這管理平台可能也會出現「上傳 / 管理媒體」及「建立 / 管理公告」的功能。
 
@@ -114,7 +114,7 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 ### 個人化設定：`config.js`
 這設定放在 `data/config.js`。
 可以設定比如是否使用 HTTPS
-或是否開啟公告之類的東西。
+或是否詳細化記錄之類的東西。
 
 ### 個人化設定：`about.pug`
 就是「關於」頁面。放在 `views/about.pug`
@@ -125,8 +125,8 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 > v2.1.0: 預設 showAuthors 為 false
 
 ### 個人化設定：`style.scss`
-**注意**：不要改 style.css，請用稍候提到的工具從 scss
-產生出 css。
+**注意**：在提交之前，請用稍候提到的 webpack
+來封裝成 CSS 檔案。
 
 用於所有頁面的全域 CSS。
 
@@ -134,17 +134,15 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 依 `data/config.js` 的設定啟動伺服器。這伺服器有個特點，
 當你變動檔案時，伺服器也會自動重新啟動而無須手動干涉。
 
-### 相關指令：`yarn run gencss`
-**注意：在提交變更前，請先使用這個指令產生 CSS。**
+### 相關指令：`yarn run build`
+**注意：在提交變更前，請先使用這個指令產生出封裝過的 JS 檔。**
 
-當你變更 `style.scss` 後，輸入 `yarn run gencss` 才會產生出
-瀏覽器可以讀取的 css 檔案。
+將 `src` 目錄下的所有檔案透過 webpack
+封裝成方便使用的 JS 檔。 
 
-### 相關指令：`yarn run standard`
-**注意：在提交變更前，請先使用這個指令進行標準化。**
-
-將存放於 `data`、`routes`、`utils` 資料夾的 JS 檔案和 `app.js` 依
-[JavaScript Standard Style](https://standardjs.com/) 進行標準化。
+### 相關指令：`yarn run build-dev`
+與 `yarn run build` 功能類似，不過加了 `--mode=developement`
+方便偵錯。
 
 ### <a id="host-inside">其他說明：怎麼將檔案寄存在這個 Node 伺服器？</a>
 目前有兩個目錄被設定成 static 位置（就是可以讓你放東西的地方）：
