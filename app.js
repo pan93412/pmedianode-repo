@@ -1,9 +1,22 @@
 const express = require('express')
 var app = express()
 const routers = require('./routes')
-const options = require('./data/config.js')
+const config = require('./data/config.js')
+const log = require('./utils/log.js')
 const https = require('https')
 const fs = require('fs')
+const proc = require('process')
+
+// 檢查字串檔是否存在
+try {
+  fs.stat(`data/strings/${config.lang}`, (err, stat) => {
+    if (err) throw err
+    if (!stat.isDirectory) throw new Error("Error: the strings path isn't a directory")
+  })
+} catch (e) {
+  log.err(e.message)
+  proc.exit(1)
+}
 
 // 預設使用可愛的 PUG 引擎。
 app.set('view engine', 'pug')
@@ -25,7 +38,7 @@ app.get('/', routers.index)
 app.get('/about', routers.about)
 
 // Announce 頁面（需在 config.js 中啟用公告功能）
-if (options.enableAnnounce) app.get('/announce', routers.announce)
+if (config.enableAnnounce) app.get('/announce', routers.announce)
 
 // Search 頁面
 app.get('/search', routers.search)
@@ -34,12 +47,12 @@ app.get('/search', routers.search)
 app.get(/\/player\/.+/, routers.player)
 
 // 然後，搞個伺服器
-if (options.isHttps) {
+if (config.isHttps) {
   const server = https.createServer({
-    cert: options.httpsCert !== '' ? fs.readFileSync(options.httpsCert) : '',
-    key: options.httpsKey !== '' ? fs.readFileSync(options.httpsKey) : ''
+    cert: config.httpsCert !== '' ? fs.readFileSync(config.httpsCert) : '',
+    key: config.httpsKey !== '' ? fs.readFileSync(config.httpsKey) : ''
   }, app)
-  server.listen(options.servPort)
+  server.listen(config.servPort)
 } else {
-  app.listen(options.servPort)
+  app.listen(config.servPort)
 }
