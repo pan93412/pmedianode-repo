@@ -18,7 +18,7 @@ const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 indexRouter.use(
   (req, res, next) => {
-    log.info(`${req.ip} 進入首頁。`) // TODO: i18n
+    if (config.verbose) log.info(`${req.ip} 進入首頁。`) // TODO: i18n
     next()
   }
 )

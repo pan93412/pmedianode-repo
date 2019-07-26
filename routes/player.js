@@ -14,7 +14,7 @@ const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 playerRouter.use(
   (req, res, next) => {
-    log.info(`${req.ip} 正在看存放在 ${req.url} 的影片。`) // TODO: i18n
+    if (config.verbose) log.info(`${req.ip} 正在看存放在 ${req.url} 的影片。`) // TODO: i18n
     next()
   }
 )

@@ -6,7 +6,7 @@ var aboutRouter = app.Router()
 
 aboutRouter.use(
   (req, res, next) => {
-    log.info(`${req.ip} 正在看關於介面。`) // TODO: i18n
+    if (config.verbose) log.info(`${req.ip} 正在看關於介面。`) // TODO: i18n
     next()
   }
 )

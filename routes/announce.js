@@ -12,7 +12,7 @@ const annoData = JSON.parse(rawAnnoData.toString()).reverse()
 
 annoRouter.use(
   (req, res, next) => {
-    log.info(`${req.ip} 在看公告。`) // TODO: i18n
+    if (config.verbose) log.info(`${req.ip} 在看公告。`) // TODO: i18n
     next()
   }
 )

@@ -12,7 +12,7 @@ const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 searchRouter.use(
   (req, res, next) => {
-    log.info(`${req.ip} ${req.query.q == null ? '進入了搜尋頁面' : '搜尋了 ' + req.query.q}`) // TODO: i18n
+    if (config.verbose) log.info(`${req.ip} ${req.query.q == null ? '進入了搜尋頁面' : '搜尋了 ' + req.query.q}`) // TODO: i18n
     next()
   }
 )
