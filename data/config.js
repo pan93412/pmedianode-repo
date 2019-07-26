@@ -82,6 +82,14 @@ const showAuthors = false
  */
 const verbose = false
 
+/**
+ * pMedia 的語言
+ *
+ * @default zh_TW
+ * @format string
+ */
+const lang = 'zh_TW'
+
 module.exports = {
   cardWidth: cardWidth,
   brand: brand,
@@ -91,5 +99,6 @@ module.exports = {
   servPort: servPort,
   enableAnnounce: enableAnnounce,
   showAuthors: showAuthors,
-  verbose: verbose
+  verbose: verbose,
+  lang: lang
 }
