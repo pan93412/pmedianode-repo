@@ -3,7 +3,7 @@ const log = require('../utils/log.js')
 const utils = require('../utils')
 const config = require('../data/config.js')
 const fs = require('fs')
-const url = require('url');
+const url = require('url')
 var playerRouter = app.Router()
 
 const rawMediaData = fs.readFileSync('data/mediaList.json', {
