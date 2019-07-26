@@ -149,7 +149,8 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 ### <a id="host-inside">其他說明：怎麼將檔案寄存在這個 Node 伺服器？</a>
 目前有兩個目錄被設定成 static 位置（就是可以讓你放東西的地方）：
 
-- assets：會對應到 `伺服器/assets`
+- assets：會對應到 `伺服器/assets` （因為是 webpack 的 dist 目錄，
+  因此不建議放在這裡。）
 - data：會對應到 `伺服器/assets/data`
 
 假設你把一個檔案（假設 `video.mp4`）放在 data 的 media 目錄中，
