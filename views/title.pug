@@ -23,5 +23,5 @@ mixin title(currentPage)
                                 a.nav-link(href=pageObj.page)= pageObj.name
 
         form.form-inline.my-2.my-md-0(action='/search' method='GET')
-            input.form-control.mr-2(type='search' name='q' value=userQuery ? userQuery : '' placeholder='試試看「pan93412」？')
-            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') 搜尋影片
+            input.form-control.mr-2(type='search' name='q' value=userQuery ? userQuery : '' placeholder=strings.title_searchPlaceHolder)
+            button.btn.btn-outline-success.my-2.my-sm-0(type='submit')= strings.title_searchBtn
