@@ -38,7 +38,8 @@ searchRouter.get('/search', (req, res) => {
     userQuery: req.query.q,
     vidDat: mediaData,
     cardWidth: config.cardWidth,
-    strings: pageStr
+    strings: pageStr,
+    sprintf: sprintf // sprintf 模組
   })
 })
 
