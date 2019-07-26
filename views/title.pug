@@ -1,5 +1,8 @@
 include ../data/navBarEntries.pug
 
+//- 提早載入 JSS
+script(src="/assets/css.bundle.js")
+
 mixin title(currentPage)
     title= brand + " - " + navData[currentPage].name
 
