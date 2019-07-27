@@ -7,16 +7,15 @@ const conf = require('../data/config.js')
  * @param {string} id, like '#brandLogo'
  * @param {string} value
  */
-function specifyValue(id, value) {
-  document.querySelector(id)
-          .setAttribute('src', value)
+function specifyValue (id, value) {
+  document.querySelector(id).setAttribute('src', value)
 }
 
 specifyValue('#brandLogo', '/assets/' + brandLogo)
 
 if (conf.showAuthors) {
   const utils = require('../utils')
-  
+
   specifyValue('#pan93412-logo', utils.getGravatar('pan93412@gmail.com'))
   specifyValue('#hugwalk-logo', utils.getGravatar('baozou0421@gmail.com'))
   specifyValue('#U2FsdGVKX1-logo', utils.getGravatar('U2FsdGVKX1@gmail.com'))
