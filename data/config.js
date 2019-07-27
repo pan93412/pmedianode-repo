@@ -72,7 +72,7 @@ const enableAnnounce = true
  * @default false
  * @format bool
  */
-const showAuthors = true
+const showAuthors = false
 
 /**
  * 是否顯示更詳細的瀏覽訊息？
