@@ -1,12 +1,12 @@
 const app = require('express')
-const log = require('../utils/log.js')
-const config = require('../data/config.js')
+const mods = require('./mods.js')
+const log = mods.log
+const config = mods.conf
 const fs = require('fs')
 
 // l10n
-const sprintf = require('sprintf-js').sprintf
+const sprintf = mods.sprintf
 const loggingStr = require(`../data/strings/${config.lang}/logging.js`)
-const pageStr = require(`../data/strings/${config.lang}/page.js`)
 
 var searchRouter = app.Router()
 
@@ -17,7 +17,7 @@ const rawMediaData = fs.readFileSync('data/mediaList.json', {
 const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 searchRouter.use(
-  (req, res, next) => {
+  (req, _, next) => {
     if (config.verbose) {
       log.info(sprintf(
         loggingStr.search_template,
@@ -33,14 +33,10 @@ searchRouter.use(
 )
 
 searchRouter.get('/search', (req, res) => {
-  res.render('search', {
-    brand: config.brand,
-    userQuery: req.query.q,
+  res.render('search', Object.assign({
     vidDat: mediaData,
-    cardWidth: config.cardWidth,
-    strings: pageStr,
-    sprintf: sprintf // sprintf 模組
-  })
+    sprintf: sprintf // sprintf 模組, which is used to render '%s 的結果'
+  }, mods.stdRoutes))
 })
 
 module.exports = searchRouter
