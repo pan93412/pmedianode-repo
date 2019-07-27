@@ -1,11 +1,11 @@
 const app = require('express')
-const log = require('../utils/log.js')
-const config = require('../data/config.js')
+const mods = require('./mods.js')
+const log = mods.log
+const config = mods.conf
 
 // l10n
-const sprintf = require('sprintf-js').sprintf
+const sprintf = mods.sprintf
 const loggingStr = require(`../data/strings/${config.lang}/logging.js`)
-const pageStr = require(`../data/strings/${config.lang}/page.js`)
 
 var aboutRouter = app.Router()
 
@@ -17,12 +17,9 @@ aboutRouter.use(
 )
 
 aboutRouter.get('/about', (req, res) => {
-  res.render('about', {
-    brand: config.brand,
-    userQuery: req.query.q,
-    showAuthors: config.showAuthors,
-    strings: pageStr
-  })
+  res.render('about', Object.assign({
+    showAuthors: config.showAuthors
+  }, mods.stdRoutes))
 })
 
 module.exports = aboutRouter
