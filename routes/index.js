@@ -3,12 +3,6 @@ const log = require('../utils/log.js')
 const config = require('../data/config.js')
 const fs = require('fs')
 
-// Routers
-const aboutRouter = require('./about.js')
-const annoRouter = require('./announce.js')
-const searchRouter = require('./search.js')
-const playerRouter = require('./player.js')
-
 // l10n
 const sprintf = require('sprintf-js').sprintf
 const loggingStr = require(`../data/strings/${config.lang}/logging.js`)
@@ -41,8 +35,8 @@ indexRouter.get('/', (req, res) => {
 
 module.exports = {
   index: indexRouter,
-  about: aboutRouter,
-  announce: annoRouter,
-  search: searchRouter,
-  player: playerRouter
+  about: require('./about.js'),
+  announce: require('./announce.js'),
+  search: require('./search.js'),
+  player: require('./player.js')
 }
