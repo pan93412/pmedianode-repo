@@ -41,5 +41,5 @@ module.exports = {
   about_founder: '程式作者',
   about_cofounder: '程式協作者',
   about_contact: '聯絡方式',
-  about_email: '電子信箱'
+  about_email: '電子信箱 '
 }

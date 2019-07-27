@@ -34,12 +34,12 @@ module.exports = {
   player_tags: 'Tags: ',
 
   /* ABOUT */
-  about_app: 'Application',
+  about_app: 'APPLICATION',
   about_readme: 'Introduction and usage',
   about_repo: 'GitHub repository',
   // vvv Priority: low vvv
   about_founder: 'FOUNDER',
   about_cofounder: 'CO-FOUNDER',
-  about_contact: 'Contact:',
-  about_email: 'E-Mail'
+  about_contact: 'Contact',
+  about_email: 'E-Mail '
 }
