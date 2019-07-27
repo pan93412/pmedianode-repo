@@ -1,12 +1,12 @@
 const app = require('express')
-const log = require('../utils/log.js')
-const config = require('../data/config.js')
+const mods = require('./mods.js')
+const log = mods.log
+const config = mods.conf
 const fs = require('fs')
 
 // l10n
-const sprintf = require('sprintf-js').sprintf
+const sprintf = mods.sprintf
 const loggingStr = require(`../data/strings/${config.lang}/logging.js`)
-const pageStr = require(`../data/strings/${config.lang}/page.js`)
 
 var indexRouter = app.Router()
 
@@ -17,20 +17,16 @@ const rawMediaData = fs.readFileSync('data/mediaList.json', {
 const mediaData = JSON.parse(rawMediaData.toString()).reverse()
 
 indexRouter.use(
-  (req, res, next) => {
+  (req, _, next) => {
     if (config.verbose) log.info(sprintf(loggingStr.index_browsed, req.ip))
     next()
   }
 )
 
 indexRouter.get('/', (req, res) => {
-  res.render('index', {
-    brand: config.brand,
-    userQuery: req.query.q,
-    vidDat: mediaData,
-    cardWidth: config.cardWidth,
-    strings: pageStr
-  })
+  res.render('index', Object.assign({
+    vidDat: mediaData
+  }, mods.stdRoutes))
 })
 
 module.exports = {
