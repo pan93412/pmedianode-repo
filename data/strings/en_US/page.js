@@ -5,7 +5,7 @@
  *     pan93412 <pan93412@gmail.com>, 2019.
  *
  * LAST UPDATE:
- *     2019/07/26
+ *     2019/07/27
  */
 
 module.exports = {
@@ -31,5 +31,15 @@ module.exports = {
   player_error: 'ERROR!',
   player_notExist: 'The media might not exists, or the ID you input is wrong!',
   player_publisher: 'Publisher: ',
-  player_tags: 'Tags: '
+  player_tags: 'Tags: ',
+
+  /* ABOUT */
+  about_app: 'Application',
+  about_readme: 'Introduction and usage',
+  about_repo: 'GitHub repository',
+  // vvv Priority: low vvv
+  about_founder: 'FOUNDER',
+  about_cofounder: 'CO-FOUNDER',
+  about_contact: 'Contact:',
+  about_email: 'E-Mail'
 }
