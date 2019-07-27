@@ -15,24 +15,17 @@ body
             .col
                 img.brandIcon#brandLogo
             .col
-                h2 pMediaNode #[span.badge.badge-secondary(style='font-size: 16px') 此站程式]
-                p 這系統的前身是 PMedia，是因為我想上傳自己的實況影片，但又怕音樂等相關版權問題
-                    |（畢竟原本是只想給幾個朋友看的…… 上傳到 YouTube 還要面對版權相關的麻煩事），
-                    | 因此決定自己弄出一個影片管理平台。
-                    | pMediaNode 是後來在 PMedia 開發完成之後，改用 Node.js 改寫的版本。
-                p pMediaNode 是個 self-hosting 自建媒體寄存平台，
-                    | 可以上傳影片和音樂（video.js 支援什麼格式，你就可以上傳什麼格式）。
-                p 介面使用 Bootstrap 及 Node.js 撰寫。
-                p 未來這管理平台可能也會出現「上傳 / 管理媒體」及「建立 / 管理公告」的功能。
-                
-                a(href='https://github.com/pan93412/pmedianode-repo') pMediaNode 的 GitHub
+                h2 pMediaNode #[span.badge.badge-secondary(style='font-size: 16px')= strings.about_app]
+                a(href='https://github.com/pan93412/pmedianode-repo/blob/master/README.md')= strings.about_readme
+                br
+                a(href='https://github.com/pan93412/pmedianode-repo')= strings.about_repo
         if showAuthors
             .row.pt-3
                 //- pan93412
                 .col
                     img.personalIcon#pan93412-logo
                 .col
-                    h2 @pan93412 #[span.badge.badge-secondary(style='font-size: 16px') 程式作者]
+                    h2 @pan93412 #[span.badge.badge-secondary(style='font-size: 16px')= strings.about_founder]
                     ul
                         li 一名自由軟體翻譯者
                         li 一名程式工程師
@@ -42,8 +35,8 @@ body
                             |  Golang
                         li 可能也是個實況主（？
                         li Bootstrap 文件爛死
-                    h3 聯絡方式
-                    a(href='mailto:pan93412[at]gmail.com') 電子信箱 
+                    h3= strings.about_contact
+                    a(href='mailto:pan93412[at]gmail.com')= strings.about_email
                     |
                     a(href='https://t.me/byStarTW_TW') Telegram 
                     |
@@ -55,7 +48,7 @@ body
                 .col
                     img.personalIcon#hugwalk-logo
                 .col
-                    h2 @hugwalk #[span.badge.badge-secondary(style='font-size: 16px') 程式協作者]
+                    h2 @hugwalk #[span.badge.badge-secondary(style='font-size: 16px')= strings.about_cofounder]
                     ul
                         li 業餘設計師
                             ul
@@ -64,8 +57,8 @@ body
                                 li 動畫
                         li 自由軟體翻譯者
                         li 我恨 Bootstrap，戰？
-                    h3 聯絡方式
-                    a(href='mailto:extended.wl[at]gmail.com') 電子信箱 
+                    h3= strings.about_contact
+                    a(href='mailto:extended.wl[at]gmail.com')= strings.about_email 
                     |
                     a(href='https://t.me/hugwalk') Telegram 
                     |
@@ -75,14 +68,14 @@ body
                 .col
                     img.personalIcon#U2FsdGVKX1-logo
                 .col
-                    h2 @U2FsdGVkX1 #[span.badge.badge-secondary(style='font-size: 16px') 程式協作者]
+                    h2 @U2FsdGVkX1 #[span.badge.badge-secondary(style='font-size: 16px')= strings.about_cofounder]
                     ul
                         li 討厭 express
                         li 討厭 Bootstrap
                         li Vue.JS 使用請
                         li Laravel 使用請
                         li koa2 使用請
-                    h3 聯絡方式
+                    h3= strings.about_contact
                     a(href='https://github.com/U2FsdGVkX1') GitHub
 
 include footer.pug
