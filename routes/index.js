@@ -25,6 +25,7 @@ indexRouter.use(
 
 indexRouter.get('/', (req, res) => {
   res.render('index', Object.assign({
+    userQuery: req.query.q,
     vidDat: mediaData
   }, mods.stdRoutes))
 })

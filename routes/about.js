@@ -18,6 +18,7 @@ aboutRouter.use(
 
 aboutRouter.get('/about', (req, res) => {
   res.render('about', Object.assign({
+    userQuery: req.query.q,
     showAuthors: config.showAuthors
   }, mods.stdRoutes))
 })

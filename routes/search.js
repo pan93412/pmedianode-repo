@@ -34,6 +34,7 @@ searchRouter.use(
 
 searchRouter.get('/search', (req, res) => {
   res.render('search', Object.assign({
+    userQuery: req.query.q,
     vidDat: mediaData,
     sprintf: sprintf // sprintf 模組, which is used to render '%s 的結果'
   }, mods.stdRoutes))

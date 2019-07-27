@@ -28,6 +28,7 @@ playerRouter.use(
 playerRouter.get('/player/:id', (req, res) => {
   const vidData = utils.getCurrentMediaData(mediaData, req.params.id)
   res.render('player', Object.assign({
+    userQuery: req.query.q,
     vidData: vidData,
     vidID: req.params.id,
     vidTags: utils.tagsParser(vidData.tags, true),
