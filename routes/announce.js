@@ -13,7 +13,7 @@ const rawAnnoData = fs.readFileSync('data/announcements.json', {
   encoding: 'UTF-8'
 })
 
-const annoData = rawAnnoData.toJSON().reverse()
+const annoData = JSON.parse(rawAnnoData.toString()).reverse()
 
 annoRouter.use(
   (req, _, next) => {
