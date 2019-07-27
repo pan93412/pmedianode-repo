@@ -1,14 +1,15 @@
+const conf = require('../data/config.js')
+const pageStr = require(`../data/strings/${conf.lang}/page.js`)
+
 const toExport = {
   log: require('../utils/log.js'),
-  conf: require('../data/config.js'),
+  conf: conf,
   sprintf: require('sprintf-js').sprintf,
-  pageStr: require(`../data/strings/${this.conf.lang}/page.js`),
+  pageStr: pageStr,
   stdRoutes: {
-    brand: this.conf.brand,
-    // eslint-disable-next-line no-undef
-    userQuery: req.query.q,
-    cardWidth: this.conf.cardWidth,
-    strings: this.pageStr
+    brand: conf.brand,
+    cardWidth: conf.cardWidth,
+    strings: pageStr
   }
 }
 
