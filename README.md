@@ -164,7 +164,7 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 那這個檔案的遠端路徑將會是 `伺服器/assets/data/media/video.mp4`。
 
 ## 一些 TODO
-- 暫無
+- 新增黑色佈景
 
 ## 作者
 pan93412, 2019.
