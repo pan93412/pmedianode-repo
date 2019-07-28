@@ -4,17 +4,13 @@ const routers = require('./routes')
 const config = require('./data/config.js')
 const log = require('./utils/log.js')
 const https = require('https')
-const fs = require('fs')
 const proc = require('process')
 
 // 檢查字串檔是否存在
 try {
-  fs.stat(`data/strings/${config.lang}`, (err, stat) => {
-    if (err) throw err
-    if (!stat.isDirectory) throw new Error("Error: the strings path isn't a directory")
-  })
+  require(`data/strings/${config.lang}/page.js`)
 } catch (e) {
-  log.err(e.message)
+  log.err("We can't load strings file: " + e.message)
   proc.exit(1)
 }
 
