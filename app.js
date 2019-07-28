@@ -8,7 +8,7 @@ const proc = require('process')
 
 // 檢查字串檔是否存在
 try {
-  require(`data/strings/${config.lang}/page.js`)
+  require(`./data/strings/${config.lang}/page.js`)
 } catch (e) {
   log.err("We can't load strings file: " + e.message)
   proc.exit(1)
