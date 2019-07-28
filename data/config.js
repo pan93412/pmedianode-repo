@@ -48,10 +48,6 @@ module.exports = {
 
   /**
    * 是否啟用公告功能？
-   * 注意：將此項設定成 false 以後，
-   * navbar 仍然會出現「公告」。
-   * 如果想完全隱藏「公告」，請將 data/navBarEntries.pug
-   * 中 announce 的 hide 項設成 false。
    *
    * @default true
    * @format bool
