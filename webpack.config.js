@@ -8,6 +8,7 @@ module.exports = {
     about: './src/about.js' // 用在 about.pug
   },
   mode: 'production',
+  // devtool: 'source-map', // for debug
   output: {
     filename: '[name].bundle.js',
     path: path.join(process.cwd(), 'assets')
