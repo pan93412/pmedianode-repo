@@ -166,6 +166,9 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 ## 一些 TODO
 - 新增黑色佈景
 
+## 授權
+MIT LICENSE
+
 ## 作者
 pan93412, 2019.
 
