@@ -8,7 +8,7 @@ const toExport = {
   pageStr: pageStr,
   stdRoutes: {
     brand: conf.brand,
-    cardWidth: conf.cardWidth,
+    cardWidth: '12.5em',
     strings: pageStr
   }
 }

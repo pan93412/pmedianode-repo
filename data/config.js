@@ -2,14 +2,6 @@
 
 module.exports = {
   /**
-   * 卡片的長度 (cardWidth)
-   *
-   * @default 12.5em
-   * @format CSS 尺寸單位
-   */
-  cardWidth: '12.5em',
-
-  /**
    * 此實體的名稱。
    *
    * @default pMediaNode
