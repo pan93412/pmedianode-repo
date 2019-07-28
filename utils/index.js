@@ -48,8 +48,20 @@ function getGravatar (email) {
   return 'https://www.gravatar.com/avatar/' + md5(email.toLowerCase()) + '?s=160'
 }
 
+/**
+ * 用來載入檔案的函式。
+ *
+ * @param {string} filename 檔案名稱
+ * @return {Buffer} 含有檔案內容的 Buffer
+ */
+function loadFile (filename) {
+  const fs = require('fs')
+  return fs.readFileSync(filename)
+}
+
 module.exports = {
   getCurrentMediaData: getCurrentMediaData,
   tagsParser: tagsParser,
-  getGravatar: getGravatar
+  getGravatar: getGravatar,
+  loadFile: loadFile
 }
