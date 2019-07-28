@@ -48,10 +48,7 @@ app.get(/\/player\/.+/, routers.player)
 
 // 然後，搞個伺服器
 if (config.isHttps) {
-  const server = https.createServer({
-    cert: config.httpsCert !== '' ? fs.readFileSync(config.httpsCert) : '',
-    key: config.httpsKey !== '' ? fs.readFileSync(config.httpsKey) : ''
-  }, app)
+  const server = https.createServer(config.httpsOptions, app)
   server.listen(config.servPort)
 } else {
   app.listen(config.servPort)

@@ -1,4 +1,7 @@
 // 相關設定
+// 用來載入檔案的函式。
+// eslint-disable-next-line no-unused-vars
+const loadFile = require('../utils').loadFile
 
 module.exports = {
   /**
@@ -22,20 +25,18 @@ module.exports = {
   isHttps: false,
 
   /**
-   * https 的 key 檔案位置
+   * https 伺服器的詳細設定
    *
-   * @default ''
-   * @format string
+   * @format Object
    */
-  httpsKey: '',
-
-  /**
-   * https 的 cert 檔案位置
-   *
-   * @default ''
-   * @format string
-   */
-  httpsCert: '',
+  httpsOptions: {
+    // https 伺服器的 key，請使用 loadFile('key 檔名') 來載入 key。
+    // ex. key: loadFile('~/key')
+    key: '',
+    // https 伺服器的 cert，請使用 loadFile('cert 檔名') 來載入 cert。
+    // ex. cert: loadFile('~/cert')
+    cert: ''
+  },
 
   /**
    * 伺服器的 port
