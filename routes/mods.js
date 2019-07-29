@@ -1,5 +1,6 @@
 const conf = require('../data/config.js')
 const stringPath = '../data/strings/'
+const langMeta = require(stringPath)
 
 /**
  * 自動選擇要使用的語言。
@@ -29,6 +30,7 @@ const toExport = {
   stdRoutes: {
     brand: conf.brand,
     cardWidth: '12.5em',
+    langMeta: langMeta,
     enableAnnounce: conf.enableAnnounce
   }
 }
