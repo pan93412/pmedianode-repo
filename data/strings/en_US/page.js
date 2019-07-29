@@ -5,7 +5,7 @@
  *     pan93412 <pan93412@gmail.com>, 2019.
  *
  * LAST UPDATE:
- *     2019/07/27
+ *     2019/07/29
  */
 
 module.exports = {
@@ -19,6 +19,7 @@ module.exports = {
   navbar_play: 'Player',
   navbar_search: 'Search',
   navbar_admin: 'Manage',
+  navbar_lang: 'Language',
 
   /* TITLE */
   title_searchPlaceHolder: 'Try "pan93412"?',

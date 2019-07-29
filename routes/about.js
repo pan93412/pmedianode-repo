@@ -19,7 +19,8 @@ aboutRouter.use(
 aboutRouter.get('/about', (req, res) => {
   res.render('about', Object.assign({
     userQuery: req.query.q,
-    showAuthors: config.showAuthors
+    showAuthors: config.showAuthors,
+    strings: mods.getLang(req.cookies, config.lang)
   }, mods.stdRoutes))
 })
 

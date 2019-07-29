@@ -32,6 +32,7 @@ playerRouter.get('/player/:id', (req, res) => {
     vidData: vidData,
     vidID: req.params.id,
     vidTags: utils.tagsParser(vidData.tags, true),
+    strings: mods.getLang(req.cookies, config.lang),
     url: url // URL Module, which is used to fix m3u8 issues.
   }, mods.stdRoutes))
 })

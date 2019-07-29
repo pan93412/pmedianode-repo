@@ -5,7 +5,7 @@
  *     pan93412 <pan93412@gmail.com>, 2019.
  *
  * LAST UPDATE:
- *     2019/07/27
+ *     2019/07/29
  */
 
 module.exports = {
@@ -19,6 +19,7 @@ module.exports = {
   navbar_play: '播放器',
   navbar_search: '搜尋',
   navbar_admin: '管理',
+  navbar_lang: '語言',
 
   /* TITLE */
   title_searchPlaceHolder: '試試看「pan93412」？',

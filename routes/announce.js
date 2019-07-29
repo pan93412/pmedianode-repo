@@ -25,7 +25,8 @@ annoRouter.use(
 annoRouter.get('/announce', (req, res) => {
   res.render('announce', Object.assign({
     userQuery: req.query.q,
-    annoDat: annoData
+    annoDat: annoData,
+    strings: mods.getLang(req.cookies, config.lang)
   }, mods.stdRoutes)
   )
 })

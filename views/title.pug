@@ -22,12 +22,12 @@ mixin title(currentPage)
                             li.nav-item
                                 a.nav-link(href=pageObj.page)= pageObj.name
 
-        form.form-inline.my-2.my-md-0(action='/search' method='GET')
-            input.form-control.mr-2(type='search' name='q' value=userQuery ? userQuery : '' placeholder=strings.title_searchPlaceHolder)
-            button.btn.btn-outline-success.my-2.my-sm-0(type='submit')= strings.title_searchBtn
-        
         .btn-group.my-2.my-md-0.mr-2.ml-1
-            button.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown') 語言
+            button.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown')= strings.navbar_lang
             .dropdown-menu.dropdown-menu-right
                 a.dropdown-item.changeLang(data-lang='zh_TW' href='#') 中文（繁體）
                 a.dropdown-item.changeLang(data-lang='en_US' href='#') English (US)
+
+        form.form-inline.my-2.my-md-0(action='/search' method='GET')
+            input.form-control.mr-2(type='search' name='q' value=userQuery ? userQuery : '' placeholder=strings.title_searchPlaceHolder)
+            button.btn.btn-outline-success.my-2.my-sm-0(type='submit')= strings.title_searchBtn
