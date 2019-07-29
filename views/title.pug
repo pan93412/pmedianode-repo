@@ -23,7 +23,7 @@ mixin title(currentPage)
                                 a.nav-link(href=pageObj.page)= pageObj.name
 
         .btn-group.my-2.my-md-0.mr-2.ml-1
-            button.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown')= strings.navbar_lang
+            button.btn.btn-outline-dark.dropdown-toggle(type='button' data-toggle='dropdown')= strings.navbar_lang
             .dropdown-menu.dropdown-menu-right
                 - for ([langcode, langname] of langMeta.langList) {
                 a.dropdown-item.changeLang(data-lang=langcode href='#')= langname
