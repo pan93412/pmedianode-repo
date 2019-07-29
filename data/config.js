@@ -73,7 +73,9 @@ module.exports = {
   verbose: false,
 
   /**
-   * pMedia 的語言
+   * pMedia 的預設語言
+   * 在使用者選擇語言之前，預設要呈現
+   * 給使用者的語言。
    *
    * @default zh_TW
    * @format string
