@@ -117,12 +117,12 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 或是否詳細化記錄之類的東西。
 
 ### 個人化設定：`about.pug`
+> v2.1.0: 預設 showAuthors 為 false
+
 就是「關於」頁面。放在 `views/about.pug`
 
 如果你不希望我們幾個開發者出現在關於頁面，
 那可以在 `data/config.js` 把 showAuthors 關閉。
-
-> v2.1.0: 預設 showAuthors 為 false
 
 ### 個人化設定：`style.scss`
 **注意**：在提交之前，請用稍候提到的 webpack
@@ -164,7 +164,7 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 那這個檔案的遠端路徑將會是 `伺服器/assets/data/media/video.mp4`。
 
 ## 一些 TODO
-- 新增黑色佈景
+請參閱 GitHub 的 Issues 議題系統
 
 ## 授權
 MIT LICENSE
