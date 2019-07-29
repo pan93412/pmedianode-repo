@@ -8,8 +8,10 @@
     "build-dev": "webpack --mode=development --display-error-details"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.4",
     "debug": "^2.6.9",
     "express": "^4.16.1",
+    "js-cookie": "^2.2.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1",
     "sprintf-js": "^1.1.2"

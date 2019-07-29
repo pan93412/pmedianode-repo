@@ -3,10 +3,11 @@ var app = express()
 const routers = require('./routes')
 const config = require('./data/config.js')
 const log = require('./utils/log.js')
-const https = require('https')
 const proc = require('process')
 
-// 檢查字串檔是否存在
+app.use(require('cookie-parser')())
+
+// 檢查預設字串檔是否存在
 try {
   require(`./data/strings/${config.lang}/page.js`)
 } catch (e) {
@@ -44,6 +45,7 @@ app.get(/\/player\/.+/, routers.player)
 
 // 然後，搞個伺服器
 if (config.isHttps) {
+  const https = require('https')
   const server = https.createServer(config.httpsOptions, app)
   server.listen(config.servPort)
 } else {
