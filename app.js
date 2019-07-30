@@ -43,6 +43,9 @@ app.get('/search', routers.search)
 // Player 頁面
 app.get(/\/player\/.+/, routers.player)
 
+// Options 頁面
+app.get('/options', routers.options)
+
 // 然後，搞個伺服器
 if (config.isHttps) {
   const https = require('https')

@@ -36,5 +36,6 @@ module.exports = {
   about: require('./about.js'),
   announce: require('./announce.js'),
   search: require('./search.js'),
-  player: require('./player.js')
+  player: require('./player.js'),
+  options: require('./options.js')
 }
