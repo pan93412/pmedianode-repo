@@ -9,7 +9,22 @@ body
     //- navbar
     +title('options')
 
-    div.container.pt-3
-        h2= '組態設定'
+    .container.pt-3
+      .row
+        h2= strings.opts_title
+          |
+          a.btn.btn-outline-dark.ml-2(role="button" onclick='history.back()' href='javascript:void(0)')= '返回上一頁'
+
+      .row.pt-2
+        .col-4
+          .card
+            .card-body
+              h5.card-title= '語言設定'
+              h6.card-subtitle.mb-2.text-muted= '設定您所使用的語言'
+              button.btn.btn-outline-dark.dropdown-toggle(type='button' data-toggle='dropdown')= strings.navbar_lang
+              .dropdown-menu
+                  - for ([langcode, langname] of langMeta.langList) {
+                  a.dropdown-item.changeLang(data-lang=langcode href='#')= langname
+                  - }
 
 include footer.pug

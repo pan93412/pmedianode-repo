@@ -24,13 +24,6 @@ mixin title(currentPage)
 
         a.btn.btn-outline-dark.my-sm-0.my-2.my-md-0.mr-2.ml-1(role="button" href='/options') 設定
 
-        //- .btn-group.my-2.my-md-0.mr-2.ml-1
-        //-     button.btn.btn-outline-dark.dropdown-toggle(type='button' data-toggle='dropdown')= strings.navbar_lang
-        //-     .dropdown-menu.dropdown-menu-right
-        //-         - for ([langcode, langname] of langMeta.langList) {
-        //-         a.dropdown-item.changeLang(data-lang=langcode href='#')= langname
-        //-         - }
-
         form.form-inline.my-2.my-md-0(action='/search' method='GET')
             input.form-control.mr-2(type='search' name='q' value=userQuery ? userQuery : '' placeholder=strings.title_searchPlaceHolder)
             button.btn.btn-outline-success.my-2.my-sm-0(type='submit')= strings.title_searchBtn
