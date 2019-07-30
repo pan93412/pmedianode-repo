@@ -22,7 +22,7 @@ mixin title(currentPage)
                             li.nav-item
                                 a.nav-link(href=pageObj.page)= pageObj.name
 
-        a.btn.btn-outline-dark.my-sm-0.my-2.my-md-0.mr-2.ml-1(role="button" href='/options') 設定
+        a.btn.btn-outline-dark.my-sm-0.my-2.my-md-0.mr-2.ml-1(role="button" href='/options')= strings.navbar_optionsPage
 
         form.form-inline.my-2.my-md-0(action='/search' method='GET')
             input.form-control.mr-2(type='search' name='q' value=userQuery ? userQuery : '' placeholder=strings.title_searchPlaceHolder)

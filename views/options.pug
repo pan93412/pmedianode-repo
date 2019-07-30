@@ -13,15 +13,15 @@ body
       .row
         h2= strings.opts_title
           |
-          a.btn.btn-outline-dark.ml-2(role="button" onclick='history.back()' href='javascript:void(0)')= '返回上一頁'
+          a.btn.btn-outline-dark.ml-2(role="button" onclick='history.back()' href='javascript:void(0)')= strings.opts_backPrevBtn
 
       .row.pt-2
         .col-4
           .card
             .card-body
-              h5.card-title= '語言設定'
-              h6.card-subtitle.mb-2.text-muted= '設定您所使用的語言'
-              button.btn.btn-outline-dark.dropdown-toggle(type='button' data-toggle='dropdown')= strings.navbar_lang
+              h5.card-title= strings.opts_langOpt
+              h6.card-subtitle.mb-2.text-muted= strings.opts_langOpt_subtitle
+              button.btn.btn-outline-dark.dropdown-toggle(type='button' data-toggle='dropdown')= strings.opts_langOpt_btn
               .dropdown-menu
                   - for ([langcode, langname] of langMeta.langList) {
                   a.dropdown-item.changeLang(data-lang=langcode href='#')= langname

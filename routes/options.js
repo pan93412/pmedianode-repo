@@ -5,13 +5,13 @@ const config = mods.conf
 
 // l10n
 const sprintf = mods.sprintf
-// const loggingStr = require(`../data/strings/${config.lang}/logging.js`)
+const loggingStr = require(`../data/strings/${config.lang}/logging.js`)
 
 var optionsRouter = app.Router()
 
 optionsRouter.use(
   (req, _, next) => {
-    if (config.verbose) log.info(sprintf('%s 進入了設定頁面', req.ip))
+    if (config.verbose) log.info(sprintf(loggingStr.options_browsed, req.ip))
     next()
   }
 )

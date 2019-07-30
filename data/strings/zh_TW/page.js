@@ -5,7 +5,7 @@
  *     pan93412 <pan93412@gmail.com>, 2019.
  *
  * LAST UPDATE:
- *     2019/07/29
+ *     2019/07/30
  */
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
   navbar_play: '播放器',
   navbar_search: '搜尋',
   navbar_admin: '管理',
-  navbar_lang: '語言',
+  navbar_optionsPage: '選項',
 
   /* TITLE */
   title_searchPlaceHolder: '試試看「pan93412」？',
@@ -42,5 +42,12 @@ module.exports = {
   about_founder: '程式作者',
   about_cofounder: '程式協作者',
   about_contact: '聯絡方式',
-  about_email: '電子信箱 '
+  about_email: '電子信箱 ',
+
+  /* OPTIONS */
+  opts_title: '網頁選項',
+  opts_langOpt: '語言設定',
+  opts_langOpt_subtitle: '設定您所使用的語言',
+  opts_langOpt_btn: '語言',
+  opts_backPrevBtn: '返回上一頁'
 }

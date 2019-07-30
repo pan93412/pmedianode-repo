@@ -5,7 +5,7 @@
  *     pan93412 <pan93412@gmail.com>, 2019.
  *
  * LAST UPDATE:
- *     2019/07/29
+ *     2019/07/30
  */
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
   navbar_play: 'Player',
   navbar_search: 'Search',
   navbar_admin: 'Manage',
-  navbar_lang: 'Language',
+  navbar_optionsPage: 'Options',
 
   /* TITLE */
   title_searchPlaceHolder: 'Try "pan93412"?',
@@ -42,5 +42,12 @@ module.exports = {
   about_founder: 'FOUNDER',
   about_cofounder: 'CO-FOUNDER',
   about_contact: 'Contact',
-  about_email: 'E-Mail '
+  about_email: 'E-Mail ',
+
+  /* OPTIONS */
+  opts_title: 'Site Options',
+  opts_langOpt: 'Language Configuration',
+  opts_langOpt_subtitle: 'Choose the language you use.',
+  opts_langOpt_btn: 'LANGUAGE',
+  opts_backPrevBtn: 'BACK'
 }

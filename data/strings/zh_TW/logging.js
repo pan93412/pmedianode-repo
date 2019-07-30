@@ -5,7 +5,7 @@
  *     pan93412 <pan93412@gmail.com>, 2019.
  *
  * LAST UPDATE:
- *     2019/07/26
+ *     2019/07/30
  */
 
 module.exports = {
@@ -16,5 +16,6 @@ module.exports = {
   player_watched: '%s 正在看存放在 %s 的影片', // %1$s: IP, %2$s: path
   search_template: '%s %s', // %1$s: IP, %2$s: action
   search_action_searchedNothing: '進入了搜尋頁面',
-  search_action_searchedSomething: '搜尋了 %s' // %1$s: query
+  search_action_searchedSomething: '搜尋了 %s', // %1$s: query
+  options_browsed: '%s 進入了設定頁面' // %1$s: IP
 }
