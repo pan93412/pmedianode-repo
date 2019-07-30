@@ -7,7 +7,7 @@ mixin title(currentPage)
     title= brand + " - " + navData[currentPage].name
 
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.align-items-center.sticky-top
-        a.navbar-brand(href='#')= brand + " - " + navData[currentPage].name
+        a.navbar-brand(href='javascript:void(0)')= brand + " - " + navData[currentPage].name
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav')
             span.navbar-toggler-icon
         
@@ -17,7 +17,7 @@ mixin title(currentPage)
                     if pageObj.hide === false
                         if pageObj === navData[currentPage]
                             li.nav-item.active
-                                a.nav-link(href='#')= pageObj.name
+                                a.nav-link(href='javascript:void(0)')= pageObj.name
                         else
                             li.nav-item
                                 a.nav-link(href=pageObj.page)= pageObj.name

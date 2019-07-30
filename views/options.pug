@@ -24,7 +24,7 @@ body
               button.btn.btn-outline-dark.dropdown-toggle(type='button' data-toggle='dropdown')= strings.opts_langOpt_btn
               .dropdown-menu
                   - for ([langcode, langname] of langMeta.langList) {
-                  a.dropdown-item.changeLang(data-lang=langcode href='#')= langname
+                  a.dropdown-item.changeLang(data-lang=langcode href='javascript:void(0)')= langname
                   - }
 
 include footer.pug

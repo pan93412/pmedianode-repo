@@ -16,7 +16,7 @@ body
                     .card-body(style='overflow: auto')
                         h5.card-title 
                             |
-                            a(id=encodeURIComponent(curData.title + '-' + curData.date) href='#' + encodeURIComponent(curData.title + "-" + curData.date))= curData.title
+                            a(id=encodeURIComponent(curData.title + '-' + curData.date) href='javascript:void(0)' + encodeURIComponent(curData.title + "-" + curData.date))= curData.title
                         h6.card-subtitle.mb-2.text-muted @#{curData.author} 
                             | at #{curData.date}
                         p.card-text!= curData.content
