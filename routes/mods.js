@@ -14,11 +14,9 @@ function getLang (cookieList, defaultLang) {
   const usrLng = cookieList.userLang
   if (usrLng) {
     try {
-      console.log(usrLng)
       return require(path.join(stringPath, `${usrLng}/page.js`))
     } catch (_) {}
   }
-  console.log(defaultLang)
   return require(path.join(stringPath, `${defaultLang}/page.js`))
 }
 

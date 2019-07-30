@@ -70,7 +70,7 @@ module.exports = {
    * @default false
    * @format bool
    */
-  verbose: false,
+  verbose: true,
 
   /**
    * pMedia 的預設語言
