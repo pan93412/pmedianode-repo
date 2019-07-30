@@ -65,14 +65,6 @@ module.exports = {
   showAuthors: false,
 
   /**
-   * 是否顯示更詳細的瀏覽訊息？
-   *
-   * @default false
-   * @format bool
-   */
-  verbose: true,
-
-  /**
    * pMedia 的預設語言
    * 在使用者選擇語言之前，預設要呈現
    * 給使用者的語言。
