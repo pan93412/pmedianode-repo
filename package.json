@@ -5,7 +5,8 @@
   "scripts": {
     "start": "bash ./start.sh",
     "build": "webpack",
-    "build-dev": "webpack --mode=development --display-error-details"
+    "build-dev": "webpack --mode=development --display-error-details",
+    "test": "mocha"
   },
   "dependencies": {
     "cookie-parser": "^1.4.4",
