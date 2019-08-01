@@ -5,13 +5,10 @@
  *     pan93412 <pan93412@gmail.com>, 2019.
  *
  * LAST UPDATE:
- *     2019/07/30
+ *     2019/08/01
  */
 
 module.exports = {
-  /* PUBLIC */
-  public_play: 'PLAY', // used on: index.pug, search.pug
-
   /* NAVBAR */
   navbar_home: 'Home',
   navbar_announce: 'Announcements',
@@ -19,11 +16,9 @@ module.exports = {
   navbar_play: 'Player',
   navbar_search: 'Search',
   navbar_admin: 'Manage',
-  navbar_optionsPage: 'Options',
 
   /* TITLE */
   title_searchPlaceHolder: 'Try "pan93412"?',
-  title_searchBtn: 'Search',
 
   /* SEARCH */
   search_result: 'Result of %s',
@@ -47,7 +42,5 @@ module.exports = {
   /* OPTIONS */
   opts_title: 'Site Options',
   opts_langOpt: 'Language Configuration',
-  opts_langOpt_subtitle: 'Choose the language you use.',
-  opts_langOpt_btn: 'LANGUAGE',
-  opts_backPrevBtn: 'BACK'
+  opts_langOpt_subtitle: 'Choose the language you use.'
 }
