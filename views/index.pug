@@ -20,6 +20,6 @@ body
                             a(href='/search?q=' + curData.author) @#{curData.author}
                         p.card-text!= desc[0]
                     div.card-body
-                        a.card-link(href='/player/' + curData.id)= strings.public_play
+                        a.card-link.playBtnOnIndex(href='/player/' + curData.id)
 
 include footer.pug

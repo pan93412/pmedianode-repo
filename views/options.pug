@@ -13,15 +13,14 @@ body
       .row
         h2= strings.opts_title
           |
-          a.btn.btn-outline-dark.ml-2(role="button" onclick='history.back()' href='javascript:void(0)')= strings.opts_backPrevBtn
-
+          a.btn.btn-outline-dark.ml-2#prevIconOnOptionsPage(role="button" onclick='history.back()' href='javascript:void(0)')
       .row.pt-2
         .col-4
           .card
             .card-body
               h5.card-title= strings.opts_langOpt
               h6.card-subtitle.mb-2.text-muted= strings.opts_langOpt_subtitle
-              button.btn.btn-outline-dark.dropdown-toggle(type='button' data-toggle='dropdown')= strings.opts_langOpt_btn
+              button.btn.btn-outline-dark.dropdown-toggle#globeIconOnOptions(type='button' data-toggle='dropdown')
               .dropdown-menu
                   - for ([langcode, langname] of langMeta.langList) {
                   a.dropdown-item.changeLang(data-lang=langcode href='javascript:void(0)')= langname

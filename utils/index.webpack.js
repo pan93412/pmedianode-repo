@@ -18,8 +18,7 @@ function getGravatar (email) {
  * 使用 toSvg() 嵌入網頁。
  */
 function getOpticons (id) {
-  const oicon = require('octicons')
-
+  const oicon = require('@primer/octicons')
   return oicon[id]
 }
 
