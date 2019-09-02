@@ -25,7 +25,7 @@ module.exports = {
 
   /* PLAYER */
   player_error: 'ERROR!',
-  player_notExist: 'The media might not exists, or the ID you input is wrong!',
+  player_notExist: 'The media may not exists, or the ID you input is wrong.',
   player_publisher: 'Publisher: ',
   player_tags: 'Tags: ',
 
