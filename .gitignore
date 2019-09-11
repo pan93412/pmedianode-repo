@@ -67,6 +67,7 @@ data/media/
 
 # 編譯成果
 dist/
+server_dist/
 
 # 暫時性：移除廢棄的檔案
 test/

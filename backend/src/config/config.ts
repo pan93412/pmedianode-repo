@@ -1,8 +1,14 @@
-/**
- * 雜項資料目錄的預設儲存位置。
- * 
- * @default
+/* 實際編譯完成的目錄架構
+ * - server_dist
+ *  - routers
+ *   - fetchMediaData.ts (這是起點目錄！)
+ *   - fetchAnnounces.ts
+ * - data
+ *  - mediaList.json
+ *  - announcements.json
+ * 前進方向： .. -> .. -> data -> [檔案]
  */
+
 /**
  * mediaList.json 的位置。
  * 
