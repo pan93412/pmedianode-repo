@@ -3,12 +3,12 @@
     "module": "es6",
     "noImplicitAny": true,
     "removeComments": true,
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true
+    "sourceMap": true
   },
   "include": [
-    "src",
-    "backend/src"
+    "./lang/*",
+    "./libs/*",
+    "*"
   ],
   "exclude": [
     "node_modules"
