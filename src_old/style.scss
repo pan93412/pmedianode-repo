@@ -1,8 +1,7 @@
 // 基礎設定
-$video_width: 640px;
-$video_height: 480px;
-$picon_size: 150px;
-$badge_size: 8px;
+$video-width: 640px;
+$video-height: 480px;
+$icon-size: 150px;
 
 // 主 SCSS
 .round {
@@ -12,8 +11,8 @@ $badge_size: 8px;
 .icon,
 .brandIcon {
     @extend .round;
-    width: $picon_size;
-    height: $picon_size;
+    width: $icon-size;
+    height: $icon-size;
     animation-name: blur;
     animation-duration: 0.5s;
 }
@@ -32,13 +31,13 @@ $badge_size: 8px;
 }
 
 .video {
-    width: $video_width;
-    height: $video_height;
+    width: $video-width;
+    height: $video-height;
 }
 
 @media screen and (max-width: 700px) {
     .video {
-        width: $video_width / 2;
-        height: $video_height / 2;
+        width: $video-width / 2;
+        height: $video-height / 2;
     }
 }

@@ -3,6 +3,10 @@ html
 head
     meta(charset='UTF-8')
 
+//- TODO: We are front-and-rear separating all the system.
+    So, all the data will be got from API, and the old
+    way to get data must be replaced with the new way.
+
 body
     include title.pug
     
@@ -15,9 +19,12 @@ body
                 - var desc = curData.desc.split(/\<br\>/)
                 div.card.col-4.mr-2(style=`min-height: ${cardWidth}; margin: .5rem`)
                     div.card-body
+                        //- title
                         h5.card-title= curData.title
+                        //- author
                         h6.card-subtitle.mb-2.text-muted
                             a(href='/search?q=' + curData.author) @#{curData.author}
+                        //- description
                         p.card-text!= desc[0]
                     div.card-body
                         a.card-link.playBtnOnIndex(href='/player/' + curData.id)

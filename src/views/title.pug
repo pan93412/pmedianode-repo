@@ -1,13 +1,11 @@
 include ../data/navBarEntries.pug
 
-//- 提早載入 JSS
-script(src="/assets/css.bundle.js")
-
 mixin title(currentPage)
-    title= brand + " - " + navData[currentPage].name
+    title #{brand} - #{navData[currentPage].name}
 
+    //- 導航列 | Navbar, like "Home", "Announcements"
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.align-items-center.sticky-top
-        a.navbar-brand(href='javascript:void(0)')= brand + " - " + navData[currentPage].name
+        a.navbar-brand(href='javascript:void(0)') #{brand} - #{navData[currentPage].name}
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav')
             span.navbar-toggler-icon
         
@@ -22,8 +20,10 @@ mixin title(currentPage)
                             li.nav-item
                                 a.nav-link(href=pageObj.page)= pageObj.name
 
+        //- 設定按鈕 | Settings button
         a.btn.btn-outline-dark.my-sm-0.my-2.my-md-0.mr-2.ml-1#optIcon(role="button" href='/options')
 
+        //- 搜尋框 | Search box
         form.form-inline.my-2.my-md-0(action='/search' method='GET')
             input.form-control.mr-2(type='search' name='q' value=userQuery ? userQuery : '' placeholder=strings.title_searchPlaceHolder)
             button.btn.btn-outline-success.my-2.my-sm-0#searchIcon(type='submit')

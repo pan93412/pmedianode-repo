@@ -1,0 +1,7 @@
+This is a directory to place anything related to frontend.
+Backend should be in utils, routes, data or other directories.
+
+This directory will be processed by webpack, and I expect that
+the output directory will be 'dist'.
+
+From now, the relation of backend and frontend will be clear.
