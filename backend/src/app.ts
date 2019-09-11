@@ -1,6 +1,6 @@
 import express from "express"
-import api from "routers/api"
-import * as conf from "config/config"
+import api from "./routers/api"
+import * as conf from "./config/config"
 
 const app = express()
 
