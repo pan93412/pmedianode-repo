@@ -1,4 +1,4 @@
-import express from "express"
+import * as express from "express"
 import api from "./routers/api"
 import * as conf from "./config/config"
 
