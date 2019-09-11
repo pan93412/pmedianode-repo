@@ -8,7 +8,7 @@ module.exports = {
     about: './src/about.js' // 用在 about.pug
   },
   mode: 'production',
-  // devtool: 'source-map', // for debug
+  devtool: 'inline-source-map',
   output: {
     filename: '[name].bundle.js',
     path: path.join(process.cwd(), 'assets')
@@ -16,23 +16,32 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s(?:a|c)ss$/,
+        test: /\.scss$/,
         use: [
           'style-loader',
           'css-loader',
           'sass-loader'
-        ]
+        ],
+        exclude: ['./node_modules']
       },
       {
         test: /\.css$/,
         use: [
           'style-loader',
           'css-loader'
-        ]
+        ],
+        exclude: ['./node_modules']
       },
       {
         test: /\.svg$/,
-        use: 'file-loader'
+        use: 'file-loader',
+        exclude: ['./node_modules']
+      },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        include: ['./src'],
+        exclude: ['./node_modules']
       }
     ]
   }
