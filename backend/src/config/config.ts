@@ -1,7 +1,7 @@
 /* 實際編譯完成的目錄架構
- * - server_dist
+ * - server_dist (這是起點目錄！)
  *  - routers
- *   - fetchMediaData.ts (這是起點目錄！)
+ *   - fetchMediaData.ts
  *   - fetchAnnounces.ts
  * - data
  *  - mediaList.json
@@ -14,14 +14,14 @@
  * 
  * @default '../../data/mediaList.json'
  */
-export const mediaListPath: string = '../../data/mediaList.json'
+export const mediaListPath: string = '../data/mediaList.json'
 
 /**
  * announcements.json 的位置。
  * 
  * @default '../../data/announcements.json'
  */
-export const annoPath: string = '../../data/announcements.json'
+export const annoPath: string = '../data/announcements.json'
 
 /**
  * 伺服器的 port
