@@ -64,3 +64,14 @@ typings/
 data/announcements.json
 data/mediaList.json
 data/media/
+
+# 編譯成果
+dist/
+server_dist/
+
+# 暫時性：移除廢棄的檔案
+test/
+utils/
+data/config.js
+routes/
+src_old/
