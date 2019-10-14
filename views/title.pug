@@ -5,6 +5,7 @@ script(src="/assets/css.bundle.js")
 
 mixin title(currentPage)
     title= brand + " - " + navData[currentPage].name
+    meta(name='viewport' value='width=device-width; initial-scale=1')
 
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.align-items-center.sticky-top
         a.navbar-brand(href='javascript:void(0)')= brand + " - " + navData[currentPage].name
