@@ -46,6 +46,9 @@ app.get(/\/player\/.+/, routers.player)
 // Options 頁面
 app.get('/options', routers.options)
 
+// Broadcast 頁面
+app.post('/api/broadcast', routers.broadcast)
+
 // 然後，搞個伺服器
 if (config.isHttps) {
   const https = require('https')

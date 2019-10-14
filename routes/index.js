@@ -24,5 +24,6 @@ module.exports = {
   announce: require('./announce.js'),
   search: require('./search.js'),
   player: require('./player.js'),
-  options: require('./options.js')
+  options: require('./options.js'),
+  broadcast: require('./broadcast.js')
 }

@@ -7,6 +7,10 @@ mixin title(currentPage)
     title= brand + " - " + navData[currentPage].name
     meta(name='viewport' value='width=device-width; initial-scale=1')
 
+    // 工具箱～
+    //- 傳送廣播
+    script(src='/assets/data/utils/broadcast_sender.js')
+
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.align-items-center.sticky-top
         a.navbar-brand(href='javascript:void(0)')= brand + " - " + navData[currentPage].name
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav')
