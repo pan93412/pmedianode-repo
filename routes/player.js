@@ -14,14 +14,22 @@ const mediaData = JSON.parse(
 
 playerRouter.get('/player/:id', (req, res) => {
   const vidData = utils.getCurrentMediaData(mediaData, req.params.id)
-  res.render('player', Object.assign({
+  const toRender = {
     userQuery: req.query.q,
-    vidData: vidData,
-    vidID: req.params.id,
-    vidTags: utils.tagsParser(vidData.tags, true),
+    vidData: null,
+    vidID: null,
+    vidTags: null,
     strings: mods.getLang(req.cookies, config.lang),
     url: url // URL Module, which is used to fix m3u8 issues.
-  }, mods.stdRoutes))
+  }
+  
+  if (vidData) {
+    toRender.vidData = vidData
+    toRender.vidID = req.params.id
+    toRender.vidTags = utils.tagsParser(vidData.tags, true)
+  }
+
+  res.render('player', Object.assign(toRender, mods.stdRoutes))
 })
 
 module.exports = playerRouter
