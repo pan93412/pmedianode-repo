@@ -4,13 +4,12 @@ const routers = require('./routes')
 const config = require('./data/config.js')
 const log = require('./utils/log.js')
 const proc = require('process')
-
 app.use(require('cookie-parser')())
 
 // 檢查預設字串檔是否存在
 try {
   require(`./data/strings/${config.lang}/page.js`)
-  const consoleStr = require(`./data/strings/${config.lang}/console.js`)
+  var consoleStr = require(`./data/strings/${config.lang}/console.js`)
 } catch (e) {
   log.err("We can't load strings file: " + e.message)
   proc.exit(1)
