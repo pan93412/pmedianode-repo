@@ -34,87 +34,23 @@ pMediaNode 是個 self-hosting 自建媒體寄存平台，可以上傳影片和�
 
 ## 設定
 ### 重要設定：媒體中介資料
-這設定放在 `data/mediaList.json`。格式如下：
-
-```json
-[
-    {
-        "id": "媒體 ID",
-        "url": "媒體存放位址",
-        "title": "媒體標題",
-        "desc": "媒體描述，用 <br> 換行",
-        "author": "媒體作者",
-        "tags": ["媒體標籤"]
-    }
-]
-```
+這設定應放在 `data/mediaList.json`。請參考
+`data/mediaList.example.json` 設定。
 
 如果你想把媒體寄存在這伺服器底下，可以放在 `data`
 資料夾的任一資料夾內（個人建議 `media`），媒體存放位置則直接寫：
 `/assets/data/[該資料夾名稱]`
 
-範例：
-
-```json
-[
-    {
-        "id": "hello-world",
-        "url": "/assets/data/media/hello_world.mp4",
-        "title": "Hello, World!",
-        "desc": "這是我第一部寄存在 PMedia 的影片。",
-        "author": "pan93412",
-        "tags": ["Hello", "World", "PMedia", "First", "第一"]
-    },
-    {
-        "id": "hello-world-2",
-        "url": "/assets/data/media/hello_world_2.mp4",
-        "title": "Hello, World 2!",
-        "desc": "這是我第二部寄存在 PMedia 的影片。",
-        "author": "pan93412",
-        "tags": ["Hello", "World", "PMedia", "First", "第二"]
-    }
-]
-```
-
 ### 重要設定：公告資料
-這設定放在 `data/announcements.json`。格式如下：
-
-```json
-[
-    {
-        "title": "公告標題",
-        "content": "公告內容",
-        "author": "公告作者",
-        "date": "公告日期 (任意格式)"
-    }
-]
-```
+這設定應放在 `data/announcements.json`。請參考
+`data/announcements.example.json` 設定。
 
 如果用不到公告功能，也可以選擇在 `config.js` 把 `enableAnnounce` 設成 `false`。
 
-範例：
-
-```json
-[
-    {
-        "title": "第一則公告！",
-        "content": "PMusic 的第一則公告！",
-        "author": "pan93412",
-        "date": "2019/07/23"
-    },
-    {
-        "title": "第二則公告！",
-        "content": "PMusic 的第二則公告！",
-        "author": "pan93412",
-        "date": "2019/07/23"
-    }
-]
-```
-
 ### 個人化設定：`config.js`
-這設定放在 `data/config.js`。
-可以設定比如是否使用 HTTPS
-或是否詳細化記錄之類的東西。
+這設定應放在 `data/config.js`。初次啟動此程式就會自動產生。
+
+可以設定比如是否使用 HTTPS 或是否詳細化記錄之類的東西。
 
 ### 個人化設定：`about.pug`
 > v2.1.0: 預設 showAuthors 為 false
