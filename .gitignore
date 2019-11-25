@@ -64,6 +64,7 @@ typings/
 data/announcements.json
 data/mediaList.json
 data/media/
+data/config.js
 
 # 編譯成果
 dist/
