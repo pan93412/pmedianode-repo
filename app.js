@@ -10,6 +10,7 @@ app.use(require('cookie-parser')())
 // 檢查預設字串檔是否存在
 try {
   require(`./data/strings/${config.lang}/page.js`)
+  const consoleStr = require(`./data/strings/${config.lang}/console.js`)
 } catch (e) {
   log.err("We can't load strings file: " + e.message)
   proc.exit(1)
@@ -26,7 +27,7 @@ app.use('/assets/data', express.static('data'))
 
 // 顯示進入詳細訊息
 if (config.verbose) app.use((req, _, next) => {
-  console.log(`${req.ip} 進入 ${req.originalUrl}`)
+  console.log(consoleStr.app_userWentInto, req.ip, req.originalUrl)
   next()
 })
 
