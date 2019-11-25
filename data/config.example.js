@@ -72,5 +72,13 @@ module.exports = {
    * @default zh_TW
    * @format string
    */
-  lang: 'zh_TW'
+  lang: 'zh_TW',
+
+  /**
+   * 是否啟用詳細訊息功能
+   *
+   * @default false
+   * @format string
+   */
+   verbose: false
 }
