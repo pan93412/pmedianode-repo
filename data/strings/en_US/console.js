@@ -13,5 +13,5 @@ module.exports = {
   bc_gotData: '[I] Got message from broadcast api:'
 
   /* app.js */
-  app_userWentInto: `[I] %s 進入 %s。`
+  app_userWentInto: `[I] %s went into %s。`
 }
