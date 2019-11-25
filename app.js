@@ -24,6 +24,12 @@ app.use('/assets', express.static('assets'))
 // 使用者可自訂的 data 存放處
 app.use('/assets/data', express.static('data'))
 
+// 顯示進入詳細訊息
+if (config.verbose) app.use((req, _, next) => {
+  console.log(`${req.ip} 進入 ${req.originalUrl}`)
+  next()
+})
+
 /*
  * Routers
  */
