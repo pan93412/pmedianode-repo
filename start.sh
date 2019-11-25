@@ -4,7 +4,6 @@ checkConfigExists() {
   if [ ! -f data/config.js ]
   then
     cp data/config.example.js data/config.js
-    exit 1
   fi
 }
 
