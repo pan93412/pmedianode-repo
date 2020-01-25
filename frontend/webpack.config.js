@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const { entries, defaultEntries, pages } = require('./webpack.pages.js')
+const { entries, defaultEntries, pages } = require('./webpack.pages.js.js')
 
 module.exports = {
   entry: entries,
