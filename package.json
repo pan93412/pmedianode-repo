@@ -7,7 +7,8 @@
     "build-dev": "webpack --mode=development"
   },
   "dependencies": {
-    "express": "^4.16.1",
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.6",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1"
   },
