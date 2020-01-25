@@ -1,7 +1,3 @@
 {
-    "liveshare.featureSet": "insiders",
-    "workbench.colorCustomizations": {},
-    "eslint.packageManager": "yarn",
-    "eslint.alwaysShowStatus": true,
-    "eslint.autoFixOnSave": true
+    "standard.autoFixOnSave": true
 }
