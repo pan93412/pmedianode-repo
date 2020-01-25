@@ -1,4 +1,10 @@
 const path = require('path')
+const webpack = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -8,7 +14,6 @@ module.exports = {
     about: './src/about.js' // 用在 about.pug
   },
   mode: 'production',
-  // devtool: 'source-map', // for debug
   output: {
     filename: '[name].bundle.js',
     path: path.join(process.cwd(), 'assets')
