@@ -1,4 +1,4 @@
-# Logs
+﻿# Logs
 logs
 *.log
 npm-debug.log*
@@ -75,5 +75,5 @@ data/custom_scripts
 test/
 utils/
 data/config.js
-routes/
+#routes/
 src_old/
