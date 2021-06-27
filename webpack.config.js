@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s(?:a|c)ss$/,
+        test: /\.s[ac]ss$/,
         use: [
           'style-loader',
           'css-loader',
@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: 'file-loader'
+        type: 'asset/resource'
       }
     ]
   }

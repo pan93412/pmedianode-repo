@@ -10,7 +10,7 @@ function specifyValue (id, value) {
   document.querySelector(id).setAttribute('src', value)
 }
 
-specifyValue('#brandLogo', '/assets/' + brandLogo)
+specifyValue('#brandLogo', brandLogo)
 
 try {
   const utils = require('../utils/index.webpack.js')
